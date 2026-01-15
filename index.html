@@ -74,7 +74,13 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Left Side: Logo 1 + Branding -->
             <div class="flex items-center space-x-4">
-                <img src="image_1.jpg" alt="Logo 1" class="h-12 w-12 bg-white rounded-full p-1 border-2 border-gold-500 object-contain">
+                <!-- GENERATED NYM LOGO (CSS) -->
+                <div class="h-12 w-12 bg-red-600 rounded-full border-2 border-gold-500 flex items-center justify-center shrink-0 overflow-hidden relative shadow-lg group">
+                    <div class="relative z-10 flex flex-col items-center justify-center">
+                        <span class="font-heading font-bold text-white text-base leading-none tracking-tighter group-hover:scale-110 transition-transform">NYM</span>
+                    </div>
+                </div>
+                
                 <div class="flex flex-col">
                     <span class="font-heading font-bold text-lg leading-tight tracking-wider text-gold-400">NYM India</span>
                     <span class="text-xs text-gray-300 uppercase tracking-widest">Assemblies of God</span>
@@ -91,8 +97,13 @@
                     <a href="#register" class="px-4 py-2 bg-gold-500 text-royal-900 rounded hover:bg-gold-400 transition duration-300 font-bold shadow-md shadow-gold-500/20">Register</a>
                 </div>
 
-                <!-- Logo 2 (Moved to the Right End) -->
-                <img src="AOG_logo.png" alt="Logo 2" class="h-12 w-12 bg-white rounded-full p-1 border-2 border-gold-500 object-contain hidden sm:block">
+                <!-- GENERATED AG LOGO (CSS) - Moved to Right End -->
+                <div class="h-12 w-12 bg-white rounded-full border-2 border-gold-500 items-center justify-center shrink-0 hidden sm:flex shadow-lg relative overflow-hidden group">
+                    <div class="relative z-10 flex items-center justify-center font-heading font-bold text-xl leading-none tracking-tighter">
+                        <span class="text-red-600">A</span>
+                        <span class="text-black">G</span>
+                    </div>
+                </div>
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden text-gold-400 hover:text-white focus:outline-none ml-2">
@@ -151,8 +162,8 @@
                     <!-- Decorative background blob -->
                     <div class="absolute -top-4 -left-4 w-24 h-24 bg-gold-100 rounded-full z-0"></div>
                     <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-royal-100 rounded-full z-0"></div>
-                    <!-- Using third uploaded image here as a feature image -->
-                    <img src="worshipp.jpg" alt="Worship Team" class="relative z-10 w-full rounded-lg shadow-2xl object-cover h-[400px]">
+                    <!-- Using Unsplash image as a feature image -->
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Worship Team" class="relative z-10 w-full rounded-lg shadow-2xl object-cover h-[400px]">
                 </div>
                 
                 <div class="order-1 md:order-2">
@@ -521,8 +532,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
