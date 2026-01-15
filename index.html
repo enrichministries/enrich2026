@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrich 2026 | Worship & Music Workshop</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: {
+                            800: '#1e3a8a', // Deep Blue
+                            900: '#172554', // Darker Blue
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Cinzel', 'serif'],
+                        body: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Styles for nuances Tailwind doesn't cover by default */
+        .hero-bg {
+            background-image: linear-gradient(rgba(23, 37, 84, 0.85), rgba(23, 37, 84, 0.7)), url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 4px solid #f59e0b;
+        }
+
+        .gold-glow {
+            text-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
+        }
+        
+        /* Form focus states */
+        .form-input:focus {
+            outline: none;
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-royal-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Left Side: Logo 1 + Branding -->
+            <div class="flex items-center space-x-4">
+                <img src="nymlogo.jpg" alt="Logo 1" class="h-12 w-12 bg-white rounded-full p-1 border-2 border-gold-500 object-contain">
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-lg leading-tight tracking-wider text-gold-400">NYM India</span>
+                    <span class="text-xs text-gray-300 uppercase tracking-widest">Assemblies of God</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Links + Logo 2 + Mobile Toggle -->
+            <div class="flex items-center gap-4 md:gap-6">
+                <!-- Desktop Links -->
+                <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wide items-center">
+                    <a href="#home" class="hover:text-gold-400 transition duration-300">Home</a>
+                    <a href="#about" class="hover:text-gold-400 transition duration-300">About</a>
+                    <a href="#syllabus" class="hover:text-gold-400 transition duration-300">Syllabus</a>
+                    <a href="#register" class="px-4 py-2 bg-gold-500 text-royal-900 rounded hover:bg-gold-400 transition duration-300 font-bold shadow-md shadow-gold-500/20">Register</a>
+                </div>
+
+                <!-- Logo 2 (Moved to the Right End) -->
+                <img src="AOG_logo.png" alt="Logo 2" class="h-12 w-12 bg-white rounded-full p-1 border-2 border-gold-500 object-contain hidden sm:block">
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gold-400 hover:text-white focus:outline-none ml-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-royal-800 border-t border-royal-700">
+            <a href="#home" class="block px-4 py-3 hover:bg-royal-700 text-gray-200">Home</a>
+            <a href="#about" class="block px-4 py-3 hover:bg-royal-700 text-gray-200">About</a>
+            <a href="#syllabus" class="block px-4 py-3 hover:bg-royal-700 text-gray-200">Syllabus</a>
+            <a href="#register" class="block px-4 py-3 bg-gold-600 text-white font-bold">Register Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg min-h-screen flex items-center relative">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center text-white py-20">
+            <div class="inline-block mb-4 animate-bounce">
+                <i class="fas fa-music text-gold-400 text-4xl"></i>
+            </div>
+            <h2 class="text-xl md:text-2xl font-body uppercase tracking-[0.3em] mb-4 text-gray-300">National Youth Ministries Presents</h2>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-2 gold-glow text-white">Enrich 2026</h1>
+            <p class="text-2xl md:text-3xl font-light italic mb-8 text-gold-400">Empowering Worship Musicians and Leaders</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-lg flex items-center gap-3">
+                    <i class="far fa-calendar-alt text-gold-400 text-xl"></i>
+                    <span class="text-lg">May 11-20, 2026</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-lg flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt text-gold-400 text-xl"></i>
+                    <span class="text-lg">Assemblies of God East India</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#register" class="px-8 py-4 bg-gold-500 hover:bg-gold-400 text-royal-900 font-bold rounded-full text-lg shadow-lg shadow-gold-500/30 transition transform hover:-translate-y-1">
+                    Reserve Your Spot
+                </a>
+                <a href="#syllabus" class="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-royal-900 text-white font-bold rounded-full text-lg transition">
+                    View Syllabus
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <!-- Decorative background blob -->
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-gold-100 rounded-full z-0"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-royal-100 rounded-full z-0"></div>
+                    <!-- Using third uploaded image here as a feature image -->
+                    <img src="worship.jpg" alt="Worship Team" class="relative z-10 w-full rounded-lg shadow-2xl object-cover h-[400px]">
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <h4 class="text-gold-600 font-bold uppercase tracking-widest mb-2">About The Event</h4>
+                    <h2 class="text-4xl font-heading font-bold text-royal-900 mb-6">Elevate Your Worship</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Enrich 2026 is not just a workshop; it is a spiritual convocation designed to equip the next generation of Levites. Whether you are holding a guitar for the first time or leading a congregation of thousands, this gathering is crafted to refine your skill and renew your spirit.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        <strong class="text-royal-800">Mission of National Youth Ministries:</strong> We exist to reach, teach, and unleash young people into their God-given destiny. Through Enrich 2026, we aim to build a strong foundation of biblical worship across our churches.
+                    </p>
+                    <div class="flex items-center gap-4">
+                         <div class="h-1 w-12 bg-gold-500"></div>
+                         <span class="font-heading text-royal-900 font-bold italic">Soli Deo Gloria</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Syllabus Section -->
+    <section id="syllabus" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-100 rounded-full opacity-50 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-heading font-bold text-royal-900 mb-4">Workshop Syllabus</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Comprehensive tracks designed to sharpen your skills and deepen your understanding of worship.</p>
+            </div>
+
+            <!-- Track 1: Music -->
+            <div class="mb-12">
+                <h3 class="flex items-center text-2xl font-bold text-royal-800 mb-8">
+                    <span class="bg-royal-100 p-2 rounded-lg mr-3 text-royal-800"><i class="fas fa-guitar"></i></span>
+                    Music Track
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Guitar -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-gold-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-gold-500 text-3xl mb-4"><i class="fas fa-guitar"></i></div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Guitar</h4>
+                        <p class="text-gray-600">From basics to advanced techniques. Focus on chord voicing, fingerstyle, and lead lines specifically for modern worship songs.</p>
+                    </div>
+
+                    <!-- Keyboard -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-gold-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-gold-500 text-3xl mb-4"><i class="fas fa-keyboard"></i></div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Keyboard & Piano</h4>
+                        <p class="text-gray-600">Mastering chord progressions, padding, layering sounds, and the art of prophetic improvisation.</p>
+                    </div>
+
+                    <!-- Drums -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-gold-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-gold-500 text-3xl mb-4"><i class="fas fa-drum"></i></div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Drums & Percussion</h4>
+                        <p class="text-gray-600">Understanding dynamics, groove, and rhythmic patterns that serve the song without overpowering it.</p>
+                    </div>
+
+                    <!-- Vocals -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-gold-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-gold-500 text-3xl mb-4"><i class="fas fa-microphone-alt"></i></div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Vocals</h4>
+                        <p class="text-gray-600">Breath control, range expansion, harmonization, and the heart of a vocal minister.</p>
+                    </div>
+
+                    <!-- Media -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-gold-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-gold-500 text-3xl mb-4"><i class="fas fa-laptop-code"></i></div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Media & Tech</h4>
+                        <p class="text-gray-600">Sound mixing, livestreaming essentials, and creating visual presentations that enhance the worship atmosphere.</p>
+                    </div>
+                </div>
+
+                <!-- NEW SECTION: Core Curriculum -->
+                <div class="mt-16 pt-10 border-t border-gray-200">
+                    <h4 class="text-2xl font-heading font-bold text-royal-900 mb-8 text-center">Core Curriculum: Theory & Musicianship</h4>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Fundamentals -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <h5 class="font-bold text-royal-800 text-lg mb-3 flex items-center">
+                                <i class="fas fa-music text-gold-500 mr-2"></i> Fundamentals & Scales
+                            </h5>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Introduction, Formation of Major Scale, Understanding Minor Scales.
+                            </p>
+                        </div>
+
+                        <!-- Chords & Harmony -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <h5 class="font-bold text-royal-800 text-lg mb-3 flex items-center">
+                                <i class="fas fa-layer-group text-gold-500 mr-2"></i> Chords & Harmony
+                            </h5>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Triads (Major, Minor, Aug, Dim), Sevenths, Suspended, Complex Chord Formations.
+                            </p>
+                        </div>
+
+                        <!-- Chord Progressions -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <h5 class="font-bold text-royal-800 text-lg mb-3 flex items-center">
+                                <i class="fas fa-route text-gold-500 mr-2"></i> Chord Progressions
+                            </h5>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                <span class="text-xs font-semibold text-gray-400 uppercase block mb-1">Roman Numeral Analysis</span>
+                                Natural Formation, Analysis (I-IV-V, I-vi-IV-V7, I-ii-IV-V, etc.), Technical Terms.
+                            </p>
+                        </div>
+
+                        <!-- Rhythm & Application -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <h5 class="font-bold text-royal-800 text-lg mb-3 flex items-center">
+                                <i class="fas fa-clock text-gold-500 mr-2"></i> Rhythm & Application
+                            </h5>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Time Signatures (2/4, 4/4, 3/4, 6/8), understanding groove and Chord Colors.
+                            </p>
+                        </div>
+
+                        <!-- Playing Worship Songs -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition md:col-span-2 lg:col-span-1">
+                            <h5 class="font-bold text-royal-800 text-lg mb-3 flex items-center">
+                                <i class="fas fa-users-rays text-gold-500 mr-2"></i> Playing Worship Songs
+                            </h5>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Working as a unified band, developing Musicianship, and effective Practice habits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track 2: Worship Leadership -->
+            <div>
+                <h3 class="flex items-center text-2xl font-bold text-royal-800 mb-8">
+                    <span class="bg-royal-100 p-2 rounded-lg mr-3 text-royal-800"><i class="fas fa-hands-praying"></i></span>
+                    Worship Track
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- 1. Worship Vision -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-eye text-gold-500 mr-2"></i> Worship Vision</h4>
+                        <p class="text-gray-600 text-sm">Defining the core purpose, biblical foundation, and prophetic direction of why we gather to worship.</p>
+                    </div>
+
+                    <!-- 2. Lifestyle of a Worshiper -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-heart text-gold-500 mr-2"></i> Lifestyle of a Worshiper</h4>
+                        <p class="text-gray-600 text-sm">Cultivating intimacy with God that extends beyond the stage, ensuring public ministry flows from private devotion.</p>
+                    </div>
+
+                    <!-- 3. Realm of the Spirit -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-wind text-gold-500 mr-2"></i> Engaging the Realm of the Spirit</h4>
+                        <p class="text-gray-600 text-sm">Learning to sense the Holy Spirit's movement, discern the atmosphere, and flow with His direction during service.</p>
+                    </div>
+
+                    <!-- 4. Role of a Worship Leader -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-user-tie text-gold-500 mr-2"></i> What does a worship leader do?</h4>
+                        <p class="text-gray-600 text-sm">Defining the multifaceted role: a shepherd to the team, a priest before God, and a musical director for the congregation.</p>
+                    </div>
+
+                    <!-- 5. Spirit, Word and Worship -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-book-bible text-gold-500 mr-2"></i> Spirit, Word and Worship</h4>
+                        <p class="text-gray-600 text-sm">Balancing theological depth with spiritual vitality to ensure our worship is both truthful and alive.</p>
+                    </div>
+
+                    <!-- 6. Building Local Church Ministry -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-church text-gold-500 mr-2"></i> Building Local Church Ministry</h4>
+                        <p class="text-gray-600 text-sm">Practical strategies for recruitment, training, discipleship, and sustaining a healthy team culture.</p>
+                    </div>
+
+                    <!-- 7. Worship and Warfare -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-shield-alt text-gold-500 mr-2"></i> Worship and Warfare</h4>
+                        <p class="text-gray-600 text-sm">Understanding praise as a spiritual weapon to break strongholds, shift atmospheres, and declare victory.</p>
+                    </div>
+
+                    <!-- 8. Choosing Worship Songs -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-list-music text-gold-500 mr-2"></i> How to choose worship songs?</h4>
+                        <p class="text-gray-600 text-sm">The art of curating setlists that serve the congregation, fit the season, and align with the sermon theme.</p>
+                    </div>
+
+                    <!-- 9. What Happens When We Play Music -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-music text-gold-500 mr-2"></i> What happens when we play music</h4>
+                        <p class="text-gray-600 text-sm">Exploring the spiritual, physical, and emotional impact of anointed sound and the theology of music.</p>
+                    </div>
+
+                    <!-- 10. Emerging Paradigms -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-royal-800 hover:shadow-xl transition duration-300">
+                        <h4 class="text-lg font-bold text-royal-900 mb-2"><i class="fas fa-lightbulb text-gold-500 mr-2"></i> Emerging Paradigms</h4>
+                        <p class="text-gray-600 text-sm">Navigating modern trends, technology, and future directions in the global ministry of worship leading.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-20 bg-white relative">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto glass-panel rounded-2xl shadow-2xl overflow-hidden">
+                <div class="md:flex">
+                    <!-- Message Side (Replaces Form) -->
+                    <div class="p-8 md:w-2/3 flex flex-col justify-center items-center text-center">
+                        <div class="mb-6 bg-gold-100 p-4 rounded-full">
+                            <i class="fas fa-hourglass-start text-4xl text-gold-600"></i>
+                        </div>
+                        <h2 class="text-3xl font-heading font-bold text-royal-900 mb-4">Registrations Begin Shortly</h2>
+                        <p class="text-gray-600 text-lg mb-8">We are finalizing the details for Enrich 2026. Please check back soon or follow our social media channels for updates on when registration opens.</p>
+                        
+                        <a href="https://www.instagram.com/nym.india?igsh=eWdwNW51MXQzd3J1" target="_blank" class="inline-flex items-center gap-2 bg-royal-900 text-white font-bold py-3 px-6 rounded-full hover:bg-gold-500 hover:text-royal-900 transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                            <span>Follow Updates on Instagram</span>
+                        </a>
+                    </div>
+
+                    <!-- Info Side -->
+                    <div class="bg-royal-900 p-8 md:w-1/3 text-white flex flex-col justify-center relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-heading font-bold text-gold-400 mb-4">Contact Us</h3>
+                            <p class="mb-6 text-gray-300 text-sm">Have questions? Reach out to us directly.</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-envelope mt-1 text-gold-500"></i>
+                                    <div>
+                                        <p class="text-xs text-gray-400 uppercase">Email</p>
+                                        <a href="mailto:enrichsow@gmail.com" class="font-semibold hover:text-gold-400 transition">enrichsow@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-phone mt-1 text-gold-500"></i>
+                                    <div>
+                                        <p class="text-xs text-gray-400 uppercase">Phone</p>
+                                        <a href="tel:+919844105095" class="font-semibold hover:text-gold-400 transition">+91 9844105095</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-globe mt-1 text-gold-500"></i>
+                                    <div>
+                                        <p class="text-xs text-gray-400 uppercase">Website</p>
+                                        <a href="https://enrichministries.in" target="_blank" class="font-semibold hover:text-gold-400 transition">enrichministries.in</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fab fa-instagram mt-1 text-gold-500"></i>
+                                    <div>
+                                        <p class="text-xs text-gray-400 uppercase">Instagram</p>
+                                        <a href="https://www.instagram.com/nym.india?igsh=eWdwNW51MXQzd3J1" target="_blank" class="font-semibold hover:text-gold-400 transition">@nym.india</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 pt-8 border-t border-royal-700">
+                                <p class="text-gold-400 font-bold mb-2">Stay Tuned!</p>
+                                <p class="text-sm">More details regarding accommodation and schedule will be released soon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal (Hidden by default) -->
+    <div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+        <div class="bg-white rounded-lg p-8 max-w-sm w-full text-center shadow-2xl transform scale-100 transition-transform">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check text-green-600 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Registration Sent!</h3>
+            <p class="text-gray-600 mb-6">Thank you for registering for Enrich 2026. We will contact you shortly.</p>
+            <button onclick="closeModal()" class="w-full bg-royal-900 text-white font-bold py-2 rounded hover:bg-royal-800 transition">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12 border-b border-gray-800 pb-12">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-heading font-bold text-gold-500 mb-4">Enrich 2026</h2>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        Organized by the National Youth Ministries of the Assemblies of God India. Empowering a generation to worship in Spirit and in Truth.
+                    </p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold-500 hover:text-royal-900 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold-500 hover:text-royal-900 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold-500 hover:text-royal-900 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-gold-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold-400 transition">About NYM</a></li>
+                        <li><a href="#syllabus" class="hover:text-gold-400 transition">Syllabus</a></li>
+                        <li><a href="#register" class="hover:text-gold-400 transition">Registration</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-gold-400 transition">Previous Workshops</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition">Worship Setlists</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition">Code of Conduct</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-gray-600 text-sm">
+                <p>&copy; 2026 National Youth Ministries - Assemblies of God India. All rights reserved.</p>
+                <p class="mt-2">Disclaimer: Event details are subject to change. Please check your email for updates after registration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Form Handling
+        function handleRegistration(e) {
+            e.preventDefault();
+            const modal = document.getElementById('successModal');
+            
+            // In a real app, you would send data to backend here
+            // const formData = new FormData(e.target);
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            e.target.reset();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('successModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
