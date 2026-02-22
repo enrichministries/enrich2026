@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrich 2026 | Youth Worship Vibes</title>
+    <title>Enrich 2026 | Worship Music Workshop</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Poppins (Black/Heavy Headers), Inter (Clean Body) -->
+    <!-- Fonts: Bebas Neue (Headers), Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:ital,wght@0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,29 +21,28 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1A1A2E',       // Deep charcoal/navy
-                        teal: '#00D4FF',       // Electric teal
-                        gold: '#FFD93D',       // Warm gold
-                        orange: '#FF8C00',     // Bright orange glow
-                        offwhite: '#F5F5F7',
+                        midnight: '#0B161E',
+                        cyan: '#00FFFF',
+                        gold: '#FFD700',
+                        offwhite: '#FFFFFF',
+                        graytext: '#E5E7EB',
                     },
                     fontFamily: {
-                        display: ['"Poppins"', 'sans-serif'],
+                        display: ['"Bebas Neue"', 'sans-serif'],
                         body: ['"Inter"', 'sans-serif'],
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'float-delayed': 'float 6s ease-in-out 3s infinite',
-                        'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'pulse-glow-cyan': 'pulse-cyan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'pulse-glow-gold': 'pulse-gold 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
-                            '50%': { transform: 'translateY(-20px) rotate(5deg)' },
+                        'pulse-cyan': {
+                            '0%, 100%': { boxShadow: '0 0 15px rgba(0, 255, 255, 0.5)' },
+                            '50%': { boxShadow: '0 0 30px rgba(0, 255, 255, 0.8)' },
                         },
-                        'pulse-glow': {
-                            '0%, 100%': { opacity: 1, transform: 'scale(1)' },
-                            '50%': { opacity: .7, transform: 'scale(1.05)' },
+                        'pulse-gold': {
+                            '0%, 100%': { boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)' },
+                            '50%': { boxShadow: '0 0 30px rgba(255, 215, 0, 0.8)' },
                         }
                     }
                 }
@@ -53,14 +52,14 @@
     
     <style>
         body {
-            background-color: #1A1A2E;
-            color: #F5F5F7;
+            background-color: #0B161E;
+            color: #E5E7EB;
             overflow-x: hidden;
         }
 
-        /* Cinematic Hero Background with Stage Light Vibe */
+        /* Hero Background with Parallax Overlay */
         .hero-bg {
-            background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.6) 50%, rgba(0, 212, 255, 0.1) 100%), url('https://images.unsplash.com/photo-1470229722913-7c090be5bb7a?auto=format&fit=crop&w=2000&q=80');
+            background-image: linear-gradient(180deg, rgba(11, 22, 30, 0.7) 0%, rgba(11, 22, 30, 0.95) 100%), url('https://images.unsplash.com/photo-1540039155732-684735035727?auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -68,384 +67,361 @@
 
         /* Glassmorphism Panels */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
-        /* Glitch CTA Hover Effect */
-        .btn-glitch {
-            position: relative;
+        /* Neon Glow Hover Effects */
+        .hover-glow-cyan:hover {
+            border-color: #00FFFF;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .hover-glow-gold:hover {
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        /* Buttons */
+        .btn-neon-cyan {
+            background-color: transparent;
+            border: 2px solid #00FFFF;
+            color: #00FFFF;
+            text-shadow: 0 0 5px rgba(0,255,255,0.5);
+            box-shadow: inset 0 0 10px rgba(0,255,255,0.2), 0 0 10px rgba(0,255,255,0.2);
             transition: all 0.2s ease;
         }
-        .btn-glitch:hover {
-            transform: scale(1.05) rotate(-2deg);
-            box-shadow: -4px 4px 0px #00D4FF, 4px -4px 0px #FF8C00;
-        }
-        .btn-glitch:active {
-            transform: scale(0.95);
-            box-shadow: 0px 0px 0px transparent;
+        .btn-neon-cyan:hover {
+            background-color: #00FFFF;
+            color: #0B161E;
+            box-shadow: 0 0 20px rgba(0,255,255,0.6);
+            transform: scale(1.05);
         }
 
-        /* Tilted Asymmetry */
-        .tilt-header {
-            transform: rotate(-3deg);
-            display: inline-block;
-        }
-        .tilt-card:hover {
-            transform: rotate(2deg) translateY(-5px);
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        /* Playlist Track Hover */
-        .playlist-track {
+        .btn-solid-cyan {
+            background-color: #00FFFF;
+            color: #0B161E;
+            box-shadow: 0 0 15px rgba(0,255,255,0.4);
             transition: all 0.2s ease;
         }
-        .playlist-track:hover {
-            background: rgba(0, 212, 255, 0.1);
-            border-left: 4px solid #00D4FF;
-            padding-left: 1.5rem;
+        .btn-solid-cyan:hover {
+            box-shadow: 0 0 25px rgba(0,255,255,0.8);
+            transform: scale(1.05) rotate(-1deg);
         }
 
-        /* Neon Text Utilities */
-        .text-neon-teal {
-            text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
-        }
-        .text-neon-gold {
-            text-shadow: 0 0 15px rgba(255, 217, 61, 0.6);
-        }
+        /* Text Utilities */
+        .text-neon-cyan { text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
+        .text-neon-gold { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
 
-        /* Stage Light Rays */
-        .light-ray {
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B161E; }
+        ::-webkit-scrollbar-thumb { background: #00FFFF; border-radius: 4px; }
+
+        /* Floating Particles */
+        .particle {
             position: absolute;
-            top: -50%;
-            left: 50%;
-            width: 200vw;
-            height: 200vh;
-            background: radial-gradient(circle at center, rgba(0,212,255,0.15) 0%, transparent 60%);
-            transform: translateX(-50%) translateY(-20%);
+            border-radius: 50%;
             pointer-events: none;
-            z-index: 0;
-            mix-blend-mode: screen;
+            opacity: 0.6;
+            animation: floatUp linear infinite;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            20% { opacity: 0.8; }
+            80% { opacity: 0.4; }
+            100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
         }
     </style>
 </head>
-<body class="font-body antialiased selection:bg-teal selection:text-navy">
+<body class="font-body antialiased selection:bg-cyan selection:text-midnight">
 
-    <!-- CSS Stage Particles (Abstract visual interest) -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-30">
-        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-teal rounded-full blur-[2px] animate-float"></div>
-        <div class="absolute top-1/3 right-1/4 w-3 h-3 bg-gold rounded-full blur-[2px] animate-float-delayed"></div>
-        <div class="absolute bottom-1/4 left-1/3 w-2 h-2 bg-orange rounded-full blur-[2px] animate-float"></div>
-        <div class="absolute top-2/3 right-1/3 w-1.5 h-1.5 bg-teal rounded-full blur-[1px] animate-float-delayed"></div>
-    </div>
+    <!-- CSS Stage Particles -->
+    <div id="particle-container" class="fixed inset-0 pointer-events-none z-0 overflow-hidden mix-blend-screen opacity-40"></div>
 
-    <!-- Navigation (Stories Style) -->
-    <nav class="fixed w-full z-50 bg-navy/80 backdrop-blur-xl border-b border-white/5 top-0">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo with IG Story-style ring -->
-            <div class="flex items-center space-x-4">
-                <div class="h-12 w-12 rounded-full p-[2px] bg-gradient-to-tr from-orange via-gold to-teal">
-                    <div class="h-full w-full bg-navy rounded-full p-1 flex items-center justify-center overflow-hidden">
-                        <img src="images/image nym_1.jpg" alt="NYM Logo" class="w-full h-full object-contain filter brightness-200">
-                    </div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-midnight/90 backdrop-blur-xl border-b border-white/5 top-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center relative z-10">
+            <!-- Branding -->
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <div class="h-10 w-10 rounded-full border border-cyan bg-midnight p-1 flex items-center justify-center overflow-hidden shadow-[0_0_10px_rgba(0,255,255,0.3)]">
+                    <img src="NYM-Icon-v1 LOGO.png" alt="NYM Logo" class="w-full h-full object-contain filter brightness-200">
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-display font-black text-xl text-offwhite tracking-tight leading-none uppercase">AGNYM</span>
-                    <span class="text-[10px] text-teal font-bold uppercase tracking-widest">Enrich '26</span>
+                    <span class="font-display text-2xl text-offwhite tracking-widest leading-none">AGNYM</span>
+                    <span class="text-[10px] text-cyan font-bold uppercase tracking-widest">Enrich '26</span>
                 </div>
             </div>
 
-            <!-- Links -->
-            <div class="flex items-center gap-8">
-                <div class="hidden md:flex space-x-8 font-display font-black text-sm uppercase tracking-widest items-center">
-                    <a href="#home" class="hover:text-teal transition duration-300">Vibe</a>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <div class="flex space-x-8 font-display text-lg uppercase tracking-widest items-center">
+                    <a href="#home" class="hover:text-cyan transition duration-300">Vibe</a>
                     <a href="#vault" class="hover:text-gold transition duration-300">Tracks</a>
-                    <a href="#playlist" class="hover:text-orange transition duration-300">Playlist</a>
+                    <a href="#playlist" class="hover:text-cyan transition duration-300">Curriculum</a>
+                    <a href="#details" class="hover:text-gold transition duration-300">Info</a>
                 </div>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block px-6 py-2 bg-teal text-navy uppercase font-display font-black tracking-widest rounded-full btn-glitch">
-                    Jam Now 🔥
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="px-6 py-2 btn-solid-cyan font-display text-xl tracking-widest rounded-sm uppercase">
+                    Register Now 🔥
                 </a>
-                
-                <!-- Hamburger Menu -->
-                <button id="mobile-menu-btn" class="md:hidden text-offwhite hover:text-teal focus:outline-none">
-                    <div class="w-8 h-1 bg-current mb-1.5 rounded-full"></div>
-                    <div class="w-6 h-1 bg-current mb-1.5 rounded-full ml-auto"></div>
-                    <div class="w-8 h-1 bg-current rounded-full"></div>
-                </button>
             </div>
+            
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-offwhite hover:text-cyan focus:outline-none text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-navy/95 backdrop-blur-3xl border-t border-white/10 absolute w-full h-screen flex flex-col pt-10 px-6 gap-6">
-            <a href="#home" class="text-4xl font-display font-black text-white hover:text-teal transition">Vibe.</a>
-            <a href="#vault" class="text-4xl font-display font-black text-white hover:text-gold transition">Tracks.</a>
-            <a href="#playlist" class="text-4xl font-display font-black text-white hover:text-orange transition">Playlist.</a>
-            <a href="#details" class="text-4xl font-display font-black text-white hover:text-teal transition">Info.</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="mt-8 px-8 py-4 bg-teal text-navy text-center uppercase font-display font-black tracking-widest rounded-full btn-glitch">
-                Jam Now 🔥
+        <div id="mobile-menu" class="hidden md:hidden bg-midnight/95 backdrop-blur-3xl border-t border-white/10 absolute w-full h-screen flex flex-col pt-12 px-6 gap-8 z-40">
+            <a href="#home" class="text-5xl font-display text-white hover:text-cyan transition">Vibe.</a>
+            <a href="#vault" class="text-5xl font-display text-white hover:text-gold transition">Tracks.</a>
+            <a href="#playlist" class="text-5xl font-display text-white hover:text-cyan transition">Curriculum.</a>
+            <a href="#details" class="text-5xl font-display text-white hover:text-gold transition">Info.</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="mt-8 px-8 py-4 btn-solid-cyan text-center uppercase font-display text-3xl tracking-widest rounded-sm">
+                Register Now 🔥
             </a>
         </div>
     </nav>
 
-    <!-- Asymmetrical Hero Section -->
+    <!-- Hero Section -->
     <header id="home" class="hero-bg min-h-screen flex flex-col justify-center relative pt-20 pb-20 overflow-hidden">
-        <div class="light-ray"></div>
-        
-        <div class="container mx-auto px-4 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center mt-10">
+        <!-- Abstract Glows -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 lg:px-12 relative z-10 flex flex-col items-center text-center mt-10">
             
-            <div class="w-full lg:w-2/3 text-left relative">
-                <!-- Glitch/Neon Subhead -->
-                <div class="inline-block px-4 py-1.5 bg-navy/50 backdrop-blur-md border border-teal/30 text-teal font-display font-black text-xs md:text-sm uppercase tracking-[0.2em] mb-6 rounded-sm shadow-[0_0_20px_rgba(0,212,255,0.2)]">
-                    // AG National Youth Movement
-                </div>
-                
-                <h1 class="text-6xl md:text-[8rem] lg:text-[10rem] font-display font-black text-offwhite leading-[0.85] tracking-tighter mb-4 tilt-header drop-shadow-2xl">
-                    ENRICH<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal via-teal to-blue-500 text-neon-teal">2026</span>
-                </h1>
-                
-                <div class="font-display font-black text-2xl md:text-4xl text-gold uppercase tracking-widest mt-6 mb-8 drop-shadow-lg max-w-2xl bg-navy/30 inline-block p-2 backdrop-blur-sm">
-                    Worship That Hits Different.
-                </div>
-                
-                <p class="text-lg font-body text-gray-300 max-w-xl mb-10 leading-relaxed border-l-2 border-teal pl-4">
-                    A 10-day immersive incubator for young musicians & worship leaders. Build community, master your instrument, and encounter God's raw presence.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-5">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="px-10 py-5 bg-gradient-to-r from-teal to-blue-500 text-navy font-display font-black text-xl uppercase tracking-widest rounded-sm btn-glitch flex items-center justify-center gap-3">
-                        Jam Now <i class="fas fa-bolt"></i>
-                    </a>
-                    <a href="#vault" class="px-10 py-5 bg-transparent text-offwhite border-2 border-white/20 font-display font-black text-xl uppercase tracking-widest rounded-sm hover:border-gold hover:text-gold transition-all flex items-center justify-center tilt-card">
-                        Explore Tracks
-                    </a>
-                </div>
+            <div class="inline-block px-4 py-1.5 glass-panel border border-cyan/30 text-cyan font-display text-lg tracking-[0.2em] mb-6 rounded-sm text-neon-cyan">
+                // AG National Youth Movement
+            </div>
+            
+            <h1 class="text-7xl md:text-[10rem] lg:text-[12rem] font-display text-offwhite leading-[0.8] tracking-tighter mb-4 drop-shadow-2xl">
+                ENRICH<br>
+                <span class="text-cyan text-neon-cyan">2026</span>
+            </h1>
+            
+            <div class="font-display text-3xl md:text-5xl text-gold uppercase tracking-widest mt-4 mb-6 text-neon-gold transform -rotate-2">
+                Worship That Hits Different.
+            </div>
+            
+            <p class="text-base md:text-lg font-body text-graytext max-w-2xl mx-auto mb-10 leading-relaxed">
+                A 10-day immersive incubator for young musicians & worship leaders. Build community, master your instrument, and encounter God's raw presence.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 items-center justify-center">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="px-12 py-4 btn-solid-cyan font-display text-3xl uppercase tracking-widest rounded-sm flex items-center gap-3">
+                    Register Now <i class="fas fa-bolt text-xl"></i>
+                </a>
+                <a href="#vault" class="px-12 py-4 btn-neon-cyan font-display text-3xl uppercase tracking-widest rounded-sm flex items-center gap-3">
+                    Explore Tracks
+                </a>
             </div>
 
-            <!-- Visual Graphic / Badge element for asymmetry -->
-            <div class="hidden lg:block lg:w-1/3 relative">
-                <div class="absolute right-0 top-0 w-64 h-64 border-4 border-gold rounded-full flex items-center justify-center transform rotate-12 animate-pulse-glow backdrop-blur-sm bg-navy/20">
-                    <div class="text-center">
-                        <p class="font-display font-black text-5xl text-gold">10</p>
-                        <p class="font-display font-black text-sm uppercase tracking-widest text-offwhite mt-1">Days of<br>Pursuit</p>
-                    </div>
-                </div>
-                <div class="absolute right-32 top-32 w-48 h-48 border-2 border-teal rounded-full transform -rotate-12 opacity-50"></div>
+            <div class="mt-16 glass-panel px-6 py-3 rounded-full flex items-center gap-4 border-white/10">
+                <span class="font-display text-xl text-gold tracking-widest">10 Days of Pursuit</span>
             </div>
         </div>
     </header>
 
-    <!-- The Vault (Music Tracks) - Stacked Asymmetrical Cards -->
-    <section id="vault" class="py-24 bg-[#141424] relative border-t border-white/5">
+    <!-- The Vault (Music Tracks) -->
+    <section id="vault" class="py-24 bg-midnight relative border-t border-white/5">
         <div class="container mx-auto px-4 lg:px-12">
-            <div class="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-end gap-6 border-b border-white/10 pb-8">
-                <div>
-                    <p class="font-display font-black text-teal text-sm uppercase tracking-[0.2em] mb-2">// Pick Your Weapon</p>
-                    <h2 class="text-5xl md:text-7xl font-display font-black text-offwhite uppercase tracking-tighter tilt-header">
-                        The Band <span class="text-teal">Vault.</span>
-                    </h2>
-                </div>
-                <p class="text-gray-400 font-body max-w-sm text-sm">Whether you're holding a guitar for the first time or leading thousands, jump in.</p>
+            <div class="mb-16 text-center">
+                <p class="font-display text-cyan text-xl uppercase tracking-[0.2em] mb-2 text-neon-cyan">// Pick Your Weapon</p>
+                <h2 class="text-6xl md:text-8xl font-display text-offwhite uppercase tracking-tighter">
+                    The Band <span class="text-gold text-neon-gold">Vault.</span>
+                </h2>
+                <p class="text-graytext font-body mt-4 max-w-lg mx-auto">Whether you're holding a guitar for the first time or leading thousands, jump in.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Guitar -->
-                <div class="glass-panel p-8 rounded-2xl tilt-card border-t-4 border-t-orange lg:mt-8 group">
-                    <div class="w-16 h-16 rounded-xl bg-orange/20 flex items-center justify-center mb-6 text-3xl text-orange group-hover:scale-110 transition-transform">🎸</div>
-                    <h3 class="text-3xl font-display font-black text-offwhite uppercase tracking-tight mb-3">Guitar</h3>
-                    <p class="text-gray-400 font-body text-sm leading-relaxed">Master modern worship vibes. Focus on chord voicing, fingerstyle, and those sweet lead lines.</p>
+                <div class="glass-panel p-8 rounded-xl hover-glow-cyan border-t-4 border-t-cyan">
+                    <div class="w-16 h-16 rounded-lg bg-cyan/10 flex items-center justify-center mb-6 text-3xl text-cyan">🎸</div>
+                    <h3 class="text-3xl font-display text-offwhite tracking-wider mb-3">Guitar</h3>
+                    <p class="text-graytext font-body text-sm leading-relaxed">Master modern worship vibes. Focus on chord voicing, fingerstyle, and those sweet lead lines.</p>
                 </div>
 
                 <!-- Keyboard -->
-                <div class="glass-panel p-8 rounded-2xl tilt-card border-t-4 border-t-teal lg:-mt-4 group">
-                    <div class="w-16 h-16 rounded-xl bg-teal/20 flex items-center justify-center mb-6 text-3xl text-teal group-hover:scale-110 transition-transform">🎹</div>
-                    <h3 class="text-3xl font-display font-black text-offwhite uppercase tracking-tight mb-3">Keys</h3>
-                    <p class="text-gray-400 font-body text-sm leading-relaxed">Unlock progressions, padding, layering sounds, and the art of prophetic flow.</p>
+                <div class="glass-panel p-8 rounded-xl hover-glow-gold border-t-4 border-t-gold">
+                    <div class="w-16 h-16 rounded-lg bg-gold/10 flex items-center justify-center mb-6 text-3xl text-gold">🎹</div>
+                    <h3 class="text-3xl font-display text-offwhite tracking-wider mb-3">Keys</h3>
+                    <p class="text-graytext font-body text-sm leading-relaxed">Unlock progressions, padding, layering sounds, and the art of prophetic flow.</p>
                 </div>
 
                 <!-- Drums -->
-                <div class="glass-panel p-8 rounded-2xl tilt-card border-t-4 border-t-gold lg:mt-12 group">
-                    <div class="w-16 h-16 rounded-xl bg-gold/20 flex items-center justify-center mb-6 text-3xl text-gold group-hover:scale-110 transition-transform">🥁</div>
-                    <h3 class="text-3xl font-display font-black text-offwhite uppercase tracking-tight mb-3">Drums</h3>
-                    <p class="text-gray-400 font-body text-sm leading-relaxed">Find the pocket. Understand dynamics, groove, and patterns that drive the song.</p>
+                <div class="glass-panel p-8 rounded-xl hover-glow-cyan border-t-4 border-t-cyan">
+                    <div class="w-16 h-16 rounded-lg bg-cyan/10 flex items-center justify-center mb-6 text-3xl text-cyan">🥁</div>
+                    <h3 class="text-3xl font-display text-offwhite tracking-wider mb-3">Drums</h3>
+                    <p class="text-graytext font-body text-sm leading-relaxed">Find the pocket. Understand dynamics, groove, and patterns that drive the song.</p>
                 </div>
 
                 <!-- Vocals -->
-                <div class="glass-panel p-8 rounded-2xl tilt-card border-t-4 border-t-orange lg:mt-0 group">
-                    <div class="w-16 h-16 rounded-xl bg-orange/20 flex items-center justify-center mb-6 text-3xl text-orange group-hover:scale-110 transition-transform">🎤</div>
-                    <h3 class="text-3xl font-display font-black text-offwhite uppercase tracking-tight mb-3">Vocals</h3>
-                    <p class="text-gray-400 font-body text-sm leading-relaxed">Breath control, harmony, range expansion, and carrying the heart of a minister.</p>
+                <div class="glass-panel p-8 rounded-xl hover-glow-gold border-t-4 border-t-gold">
+                    <div class="w-16 h-16 rounded-lg bg-gold/10 flex items-center justify-center mb-6 text-3xl text-gold">🎤</div>
+                    <h3 class="text-3xl font-display text-offwhite tracking-wider mb-3">Vocals</h3>
+                    <p class="text-graytext font-body text-sm leading-relaxed">Breath control, harmony, range expansion, and carrying the heart of a minister.</p>
                 </div>
             </div>
             
-            <div class="mt-12 glass-panel p-4 rounded-xl flex items-center justify-center gap-3 border-teal/30 text-teal font-display font-black uppercase tracking-widest text-sm">
+            <div class="mt-12 glass-panel p-4 rounded-sm flex items-center justify-center gap-3 border-cyan/30 text-cyan font-display text-xl uppercase tracking-widest text-neon-cyan animate-pulse-glow-cyan max-w-2xl mx-auto text-center">
                 <i class="fas fa-fire"></i> Pro Tip: Every track includes band labs & live encounters!
             </div>
         </div>
     </section>
 
     <!-- Spotify Playlist Style Curriculum -->
-    <section id="playlist" class="py-24 bg-[#1A1A2E] relative border-t border-white/5 overflow-hidden">
-        <!-- Background Glows -->
-        <div class="absolute left-[-10%] top-1/4 w-96 h-96 bg-teal/10 rounded-full blur-[100px] pointer-events-none"></div>
-        <div class="absolute right-[-10%] bottom-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-        <div class="container mx-auto px-4 lg:px-12 relative z-10">
+    <section id="playlist" class="py-24 bg-[#080d12] relative border-t border-white/5">
+        <div class="container mx-auto px-4 lg:px-12">
             
             <div class="mb-16 text-center">
-                <p class="font-display font-black text-gold text-sm uppercase tracking-[0.2em] mb-2">// The Setlist</p>
-                <h2 class="text-5xl md:text-7xl font-display font-black text-offwhite uppercase tracking-tighter">
-                    Deep Dive <span class="text-gold text-neon-gold tilt-header inline-block">Curriculum</span>
+                <p class="font-display text-gold text-xl uppercase tracking-[0.2em] mb-2 text-neon-gold">// The Setlist</p>
+                <h2 class="text-6xl md:text-8xl font-display text-offwhite uppercase tracking-tighter">
+                    Deep Dive <span class="text-cyan text-neon-cyan">Curriculum</span>
                 </h2>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-24">
                 
                 <!-- PLAYLIST 1: MUSIC THEORY -->
-                <div>
+                <div class="glass-panel p-6 rounded-xl border border-white/5">
                     <div class="flex items-end gap-6 mb-8 border-b border-white/10 pb-6">
-                        <div class="w-32 h-32 bg-gradient-to-br from-teal to-navy rounded-lg shadow-2xl flex items-center justify-center border border-white/10">
-                            <i class="fas fa-sliders-h text-4xl text-white"></i>
+                        <div class="w-24 h-24 bg-gradient-to-br from-cyan to-midnight rounded-md flex items-center justify-center shadow-[0_0_15px_rgba(0,255,255,0.2)] shrink-0">
+                            <i class="fas fa-sliders-h text-3xl text-white"></i>
                         </div>
                         <div>
-                            <p class="text-xs font-display font-black text-gray-400 uppercase tracking-widest mb-1"></p>
-                            <h3 class="text-3xl md:text-4xl font-display font-black text-offwhite uppercase tracking-tight">Theory & Mastery</h3>
-                            <p class="text-sm font-body text-teal mt-2"></p>
+                            <h3 class="text-4xl font-display text-offwhite uppercase tracking-tight">Theory & Mastery</h3>
+                            <p class="text-sm font-display text-cyan tracking-widest mt-1">5 Tracks • 10 Days</p>
                         </div>
                     </div>
                     
-                    <div class="space-y-2">
-                        <!-- Track Item -->
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-teal">01</span>
+                    <div class="space-y-1">
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">01</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-teal transition-colors">Fundamentals & Scales</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Intro, Major Scale Formation, Minor Scales.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Fundamentals & Scales</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Intro, Major Scale Formation, Minor Scales.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-teal">02</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">02</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-teal transition-colors">Chords & Harmony</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Triads, Sevenths, Suspended, Complex Formations.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Chords & Harmony</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Triads, Sevenths, Suspended, Complex Formations.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-teal">03</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">03</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-teal transition-colors">Chord Progressions</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Roman Numeral Analysis (I-IV-V, etc.), Technical Terms.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Chord Progressions</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Roman Numeral Analysis (I-IV-V, etc.), Technical Terms.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-teal">04</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">04</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-teal transition-colors">Rhythm & Application</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Time Signatures, Groove, Chord Colors.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Rhythm & Application</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Time Signatures, Groove, Chord Colors.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-teal">05</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">05</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-teal transition-colors">Playing Worship Songs</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Working as a unified band, Musicianship, Practice habits.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Playing Worship Songs</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Working as a unified band, Musicianship, Practice habits.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- PLAYLIST 2: WORSHIP LEADERSHIP -->
-                <div>
+                <div class="glass-panel p-6 rounded-xl border border-white/5">
                     <div class="flex items-end gap-6 mb-8 border-b border-white/10 pb-6">
-                        <div class="w-32 h-32 bg-gradient-to-br from-orange to-navy rounded-lg shadow-2xl flex items-center justify-center border border-white/10">
-                            <i class="fas fa-fire text-4xl text-white"></i>
+                        <div class="w-24 h-24 bg-gradient-to-br from-gold to-midnight rounded-md flex items-center justify-center shadow-[0_0_15px_rgba(255,215,0,0.2)] shrink-0">
+                            <i class="fas fa-fire text-3xl text-white"></i>
                         </div>
                         <div>
-                            <p class="text-xs font-display font-black text-gray-400 uppercase tracking-widest mb-1"></p>
-                            <h3 class="text-3xl md:text-4xl font-display font-black text-offwhite uppercase tracking-tight">Worship Leadership</h3>
-                            <p class="text-sm font-body text-orange mt-2"></p>
+                            <h3 class="text-4xl font-display text-offwhite uppercase tracking-tight">Worship Leadership</h3>
+                            <p class="text-sm font-display text-gold tracking-widest mt-1">10 Tracks • 10 Days</p>
                         </div>
                     </div>
                     
-                    <div class="space-y-2 h-[400px] overflow-y-auto pr-2 custom-scroll">
-                        <!-- Custom scrollbar style inline for this container -->
-                        <style>
-                            .custom-scroll::-webkit-scrollbar { width: 4px; }
-                            .custom-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
-                            .custom-scroll::-webkit-scrollbar-thumb { background: #FF8C00; border-radius: 4px; }
-                        </style>
-
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">01</span>
+                    <div class="space-y-1 h-[360px] overflow-y-auto pr-2">
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">01</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Worship Vision</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Core purpose, biblical foundation, prophetic direction.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Worship Vision</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Core purpose, biblical foundation, prophetic direction.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">02</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">02</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Lifestyle of a Worshiper</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Intimacy with God, public ministry from private devotion.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Lifestyle of a Worshiper</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Intimacy with God, public ministry from private devotion.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">03</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">03</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Realm of the Spirit</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Sensing movement, discerning atmosphere, flowing.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Realm of the Spirit</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Sensing movement, discerning atmosphere, flowing.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">04</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">04</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">The Leader's Role</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Shepherd, priest, and musical director.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">The Leader's Role</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Shepherd, priest, and musical director.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">05</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">05</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Spirit, Word & Worship</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Balancing theological depth with spiritual vitality.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Spirit, Word & Worship</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Balancing theological depth with spiritual vitality.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">06</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">06</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Local Church Ministry</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Recruitment, training, discipleship, team culture.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Local Church Ministry</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Recruitment, training, discipleship, team culture.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">07</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">07</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Worship and Warfare</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Praise as a weapon, shifting atmospheres.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Worship and Warfare</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Praise as a weapon, shifting atmospheres.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">08</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">08</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Choosing Worship Songs</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Curating setlists, serving the congregation.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Choosing Worship Songs</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Curating setlists, serving the congregation.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">09</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">09</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Impact of Music</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Spiritual, physical, and emotional impact.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Impact of Music</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Spiritual, physical, and emotional impact.</p>
                             </div>
                         </div>
-                        <div class="playlist-track flex items-start gap-4 p-3 rounded-md cursor-pointer group hover:border-l-[#FF8C00]">
-                            <span class="text-gray-500 font-display font-black text-lg w-6 text-right mt-0.5 group-hover:text-orange">10</span>
+                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
+                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">10</span>
                             <div>
-                                <h4 class="font-display font-black text-offwhite text-lg tracking-wide group-hover:text-orange transition-colors">Emerging Paradigms</h4>
-                                <p class="text-gray-400 text-xs font-body mt-1">Navigating trends, tech, and future directions.</p>
+                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Emerging Paradigms</h4>
+                                <p class="text-graytext text-xs font-body mt-1">Navigating trends, tech, and future directions.</p>
                             </div>
                         </div>
                     </div>
@@ -455,114 +431,185 @@
         </div>
     </section>
 
-    <!-- Details/Vitals Section -->
-    <section id="details" class="py-16 bg-[#141424] border-t border-white/5">
+    <!-- Details / Location / Pricing Section -->
+    <section id="details" class="py-24 bg-midnight border-t border-white/5 relative z-10">
         <div class="container mx-auto px-4 lg:px-12">
-            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-6xl md:text-8xl font-display text-white tracking-tighter">
+                    THE <span class="text-cyan text-neon-cyan">VITALS</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
                 <!-- Date -->
-                <div class="bg-navy p-6 rounded-xl border border-white/10 flex items-center gap-5 hover:border-teal transition group">
-                    <div class="text-4xl text-teal group-hover:scale-110 transition-transform">📅</div>
-                    <div>
-                        <h4 class="font-display font-black text-offwhite text-xl uppercase tracking-wider">When</h4>
-                        <p class="text-sm font-body text-gray-400">May 11 - 20, 2026</p>
-                    </div>
+                <div onclick="openCalendar()" class="glass-panel p-8 rounded-xl flex flex-col items-center text-center hover-glow-cyan border-t-2 border-cyan cursor-pointer group">
+                    <div class="text-5xl text-cyan mb-4 group-hover:scale-110 transition-transform">📅</div>
+                    <h4 class="font-display text-white text-3xl tracking-wider mb-2">When</h4>
+                    <p class="text-base font-body text-graytext group-hover:text-cyan transition flex items-center gap-2">May 11 - May 20, 2026 <i class="fas fa-external-link-alt text-[10px]"></i></p>
                 </div>
 
                 <!-- Location -->
-                <a href="https://maps.app.goo.gl/ivj7KQWnZHwTrWK57" target="_blank" rel="noopener noreferrer" class="bg-navy p-6 rounded-xl border border-white/10 flex items-center gap-5 hover:border-gold transition group cursor-pointer">
-                    <div class="text-4xl text-gold group-hover:scale-110 transition-transform">📍</div>
-                    <div>
-                        <h4 class="font-display font-black text-offwhite text-xl uppercase tracking-wider">Where</h4>
-                        <p class="text-sm font-body text-gray-400 group-hover:text-gold transition">HBTC, Guwahati <i class="fas fa-external-link-alt text-[10px] ml-1"></i></p>
-                    </div>
+                <a href="https://maps.app.goo.gl/ivj7KQWnZHwTrWK57" target="_blank" rel="noopener noreferrer" class="glass-panel p-8 rounded-xl flex flex-col items-center text-center hover-glow-gold border-t-2 border-gold cursor-pointer group">
+                    <div class="text-5xl text-gold mb-4 group-hover:scale-110 transition-transform">📍</div>
+                    <h4 class="font-display text-white text-3xl tracking-wider mb-2">Where</h4>
+                    <p class="text-base font-body text-graytext group-hover:text-gold transition flex items-center gap-1">HBTC, Guwahati <i class="fas fa-external-link-alt text-[10px]"></i></p>
                 </a>
 
-                <!-- Tickets -->
-                <div class="bg-navy p-6 rounded-xl border border-white/10 flex items-center gap-5 hover:border-orange transition group">
-                    <div class="text-4xl text-orange group-hover:scale-110 transition-transform">🎟️</div>
-                    <div class="w-full">
-                        <div class="flex justify-between items-center border-b border-white/5 pb-1 mb-1">
-                            <span class="text-xs font-display font-black uppercase text-gray-400">Residential</span>
-                            <span class="text-sm font-display font-black text-offwhite">₹8,000</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-display font-black uppercase text-gray-400">Non-Res</span>
-                            <span class="text-sm font-display font-black text-teal">₹5,000</span>
-                        </div>
-                    </div>
+                <!-- Age -->
+                <div class="glass-panel p-8 rounded-xl flex flex-col items-center text-center hover-glow-cyan border-t-2 border-cyan">
+                    <div class="text-5xl text-cyan mb-4">🙌</div>
+                    <h4 class="font-display text-white text-3xl tracking-wider mb-2">Who</h4>
+                    <p class="text-base font-body text-graytext">Age 13+</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Final CTA Footer -->
-    <section class="py-32 bg-navy relative overflow-hidden border-t border-white/5 text-center">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#00D4FF]/10 to-transparent pointer-events-none"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <p class="font-display font-black text-teal text-sm uppercase tracking-[0.2em] mb-4">// Don't sleep on this</p>
-            <h2 class="text-6xl md:text-8xl font-display font-black text-offwhite uppercase tracking-tighter mb-10 tilt-header drop-shadow-2xl">
-                Ready to <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange to-gold">Jam?</span>
-            </h2>
-            
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-block px-12 py-6 bg-teal text-navy font-display font-black text-2xl uppercase tracking-widest rounded-sm btn-glitch">
-                Click to Register 🔥
-            </a>
-            
-            <div class="mt-20 flex flex-col items-center">
-                <a href="https://www.instagram.com/nym.india?igsh=eWdwNW51MXQzd3J1" target="_blank" class="flex items-center gap-3 text-gray-400 hover:text-offwhite transition">
-                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-xl border border-white/10">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <span class="font-display font-black uppercase tracking-widest text-sm">Follow @nym.india</span>
-                </a>
+            <!-- Tickets / Pricing -->
+            <div class="max-w-4xl mx-auto bg-[#080d12] border border-white/10 p-8 md:p-12 rounded-2xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-cyan to-gold"></div>
+                <h3 class="text-5xl font-display text-center text-white mb-10 tracking-widest">WORKSHOP FEE</h3>
                 
-                <div class="flex gap-6 mt-8 text-xs font-display font-black uppercase tracking-widest text-gray-500 flex-wrap justify-center">
-                    <p>Rev. Dr. Jacob Mathew: 9007275443</p>
-                    <p>Rev. Arpan Chettri: 7002298093</p>
-                    <p>Rev. Dr. Sunny Prasad: 9844105095</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Residential -->
+                    <div class="glass-panel p-8 rounded-xl text-center border-cyan/30">
+                        <h4 class="text-2xl font-display text-cyan tracking-widest mb-2 uppercase">Residential</h4>
+                        <p class="text-5xl font-display text-white tracking-wider mb-6">₹8,000</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" class="w-full block py-4 btn-solid-cyan font-display text-2xl tracking-widest rounded-sm uppercase">Select</a>
+                    </div>
+                    
+                    <!-- Non-Residential -->
+                    <div class="glass-panel p-8 rounded-xl text-center border-gold/30">
+                        <h4 class="text-2xl font-display text-gold tracking-widest mb-2 uppercase">Non-Residential</h4>
+                        <p class="text-5xl font-display text-white tracking-wider mb-6">₹5,000</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" class="w-full block py-4 btn-solid-cyan font-display text-2xl tracking-widest rounded-sm uppercase bg-gold shadow-[0_0_15px_rgba(255,215,0,0.4)] hover:shadow-[0_0_25px_rgba(255,215,0,0.8)] border-gold text-midnight">Select</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#0f0f1a] py-6 text-center border-t border-white/5">
-        <p class="font-body text-xs text-gray-600">
+    <!-- Calendar Modal Popup -->
+    <div id="calendarModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-midnight/80 backdrop-blur-md transition-opacity duration-300">
+        <div class="glass-panel bg-[#080d12] border-2 border-cyan p-8 rounded-2xl w-[90%] max-w-md relative shadow-[0_0_40px_rgba(0,255,255,0.3)] transform scale-95 opacity-0 transition-all duration-300" id="calendarCard">
+            <button onclick="closeCalendar()" class="absolute top-4 right-4 text-gray-500 hover:text-cyan text-2xl transition-colors"><i class="fas fa-times"></i></button>
+            <h3 class="text-4xl font-display text-white mb-2 tracking-widest text-center">SAVE THE <span class="text-cyan text-neon-cyan">DATE</span></h3>
+            <p class="text-center font-body text-graytext text-sm mb-6">May 11 - May 20, 2026</p>
+            
+            <div class="bg-midnight rounded-xl p-4 border border-white/10">
+                <div class="flex justify-between items-center mb-4 px-2">
+                    <button class="text-gray-600 hover:text-white transition"><i class="fas fa-chevron-left"></i></button>
+                    <span class="font-display tracking-widest text-lg text-white">MAY 2026</span>
+                    <button class="text-gray-600 hover:text-white transition"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="grid grid-cols-7 gap-1 text-center font-display tracking-wider text-sm mb-2 text-gray-500">
+                    <div>SU</div><div>MO</div><div>TU</div><div>WE</div><div>TH</div><div>FR</div><div>SA</div>
+                </div>
+                <div class="grid grid-cols-7 gap-1 text-center font-body text-sm">
+                    <!-- Week 2 -->
+                    <div class="p-2 text-white">10</div>
+                    <div class="p-2 bg-cyan text-midnight font-bold rounded-lg shadow-[0_0_15px_rgba(0,255,255,0.5)] transform scale-110 relative z-10">11</div>
+                    <div class="p-2 bg-cyan/20 text-cyan font-bold rounded-lg">12</div>
+                    <div class="p-2 bg-cyan/20 text-cyan font-bold rounded-lg">13</div>
+                    <div class="p-2 bg-cyan/20 text-cyan font-bold rounded-lg">14</div>
+                    <div class="p-2 bg-cyan/20 text-cyan font-bold rounded-lg">15</div>
+                    <div class="p-2 bg-cyan/20 text-cyan font-bold rounded-lg">16</div>
+                    <!-- Week 3 -->
+                    <div class="p-2 bg-cyan/20 text-cyan font-bold rounded-lg">17</div>
+                    <div class="p-2 bg-cyan/20 text-cyan font-bold rounded-lg">18</div>
+                    <div class="p-2 bg-cyan/20 text-cyan font-bold rounded-lg">19</div>
+                    <div class="p-2 bg-gold text-midnight font-bold rounded-lg shadow-[0_0_15px_rgba(255,215,0,0.5)] transform scale-110 relative z-10">20</div>
+                    <div class="p-2 text-white">21</div>
+                    <div class="p-2 text-white">22</div>
+                    <div class="p-2 text-white">23</div>
+                </div>
+            </div>
+            
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ENRICH+2026+Worship+Workshop&dates=20260511T033000Z/20260520T123000Z&details=Youth+worship+leadership+and+music+workshop.&location=Bengaluru" target="_blank" class="mt-6 w-full block py-3 btn-solid-cyan font-display text-xl tracking-widest text-center rounded-sm uppercase">
+                <i class="far fa-calendar-plus mr-2"></i> Add to Calendar
+            </a>
+        </div>
+    </div>
+
+    <footer class="bg-black py-8 text-center border-t border-white/10">
+        <p class="font-body text-sm text-gray-500">
             &copy; 2026 AG National Youth Movement. Built for the next generation of worship leaders.
         </p>
     </footer>
 
-    <!-- JavaScript for Mobile Menu -->
+    <!-- JavaScript -->
     <script>
+        // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        const iconBars = btn.querySelectorAll('div');
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
-            // Simple animated hamburger to X toggle
-            if(!menu.classList.contains('hidden')) {
-                iconBars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                iconBars[1].style.opacity = '0';
-                iconBars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-            } else {
-                iconBars[0].style.transform = 'none';
-                iconBars[1].style.opacity = '1';
-                iconBars[2].style.transform = 'none';
-            }
         });
         
         const menuLinks = menu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
-                iconBars[0].style.transform = 'none';
-                iconBars[1].style.opacity = '1';
-                iconBars[2].style.transform = 'none';
             });
+        });
+
+        // Generate Stage Particles
+        const container = document.getElementById('particle-container');
+        const colors = ['#00FFFF', '#FFD700']; // Cyan and Gold
+        
+        for (let i = 0; i < 30; i++) {
+            let particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            let size = Math.random() * 6 + 2; 
+            let left = Math.random() * 100; 
+            let duration = Math.random() * 4 + 3; 
+            let delay = Math.random() * 5; 
+            let color = colors[Math.floor(Math.random() * colors.length)];
+            
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = left + '%';
+            particle.style.background = color;
+            particle.style.boxShadow = `0 0 10px ${color}`;
+            particle.style.animationDuration = duration + 's';
+            particle.style.animationDelay = delay + 's';
+            
+            container.appendChild(particle);
+        }
+
+        // Calendar Popup Logic
+        function openCalendar() {
+            const modal = document.getElementById('calendarModal');
+            const card = document.getElementById('calendarCard');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Small delay to allow display:flex to apply before animating opacity/transform
+            setTimeout(() => {
+                card.classList.remove('scale-95', 'opacity-0');
+                card.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeCalendar() {
+            const modal = document.getElementById('calendarModal');
+            const card = document.getElementById('calendarCard');
+            card.classList.remove('scale-100', 'opacity-100');
+            card.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 300); // Wait for CSS transition to finish
+        }
+
+        // Close calendar when clicking outside the card
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('calendarModal');
+            if (e.target === modal) {
+                closeCalendar();
+            }
         });
     </script>
 </body>
 </html>
-
-
