@@ -243,276 +243,74 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Guitar -->
-                <div onclick="openGuitarModal()" class="glass-panel p-8 rounded-xl hover-glow-cyan border-t-4 border-t-cyan cursor-pointer group">
+                <div class="glass-panel p-8 rounded-xl hover-glow-cyan border-t-4 border-t-cyan group flex flex-col h-full transition-all">
                     <div class="w-16 h-16 rounded-lg bg-cyan/10 flex items-center justify-center mb-6 text-3xl text-cyan group-hover:scale-110 transition-transform">🎸</div>
                     <h3 class="text-3xl font-display text-offwhite tracking-wider mb-3">Guitar</h3>
-                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-cyan transition-colors">Master modern worship vibes. Focus on chord voicing, fingerstyle, and those sweet lead lines. <span class="block mt-2 text-cyan font-bold text-xs uppercase tracking-widest">Click to view sample course <i class="fas fa-external-link-alt"></i></span></p>
+                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-cyan transition-colors mb-6">Master modern worship vibes. Focus on chord voicing, fingerstyle, and those sweet lead lines.</p>
+                    
+                    <div class="mt-auto flex flex-col gap-2">
+                        <button onclick="openGuitarModal('16:9')" class="text-left text-cyan font-bold text-xs uppercase tracking-widest hover:text-midnight hover:bg-cyan transition flex items-center justify-between bg-cyan/10 p-3 rounded border border-cyan/20">
+                            <span><i class="fas fa-desktop mr-1"></i> Sample Course (16:9)</span>
+                            <i class="fas fa-play-circle"></i>
+                        </button>
+                        <button onclick="openGuitarModal('9:16')" class="text-left text-gold font-bold text-xs uppercase tracking-widest hover:text-midnight hover:bg-gold transition flex items-center justify-between bg-gold/10 p-3 rounded border border-gold/20">
+                            <span><i class="fas fa-mobile-alt mr-1"></i> Full Screen (9:16)</span>
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Keyboard -->
-                <div onclick="openKeysModal()" class="glass-panel p-8 rounded-xl hover-glow-gold border-t-4 border-t-gold cursor-pointer group">
+                <div class="glass-panel p-8 rounded-xl hover-glow-gold border-t-4 border-t-gold group flex flex-col h-full transition-all">
                     <div class="w-16 h-16 rounded-lg bg-gold/10 flex items-center justify-center mb-6 text-3xl text-gold group-hover:scale-110 transition-transform">🎹</div>
                     <h3 class="text-3xl font-display text-offwhite tracking-wider mb-3">Keys</h3>
-                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-gold transition-colors">Unlock progressions, padding, layering sounds, and the art of prophetic flow. <span class="block mt-2 text-gold font-bold text-xs uppercase tracking-widest">Click to view sample course <i class="fas fa-external-link-alt"></i></span></p>
+                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-gold transition-colors mb-6">Unlock progressions, padding, layering sounds, and the art of prophetic flow.</p>
+                    
+                    <div class="mt-auto flex flex-col gap-2">
+                        <button onclick="openKeysModal('16:9')" class="text-left text-gold font-bold text-xs uppercase tracking-widest hover:text-midnight hover:bg-gold transition flex items-center justify-between bg-gold/10 p-3 rounded border border-gold/20">
+                            <span><i class="fas fa-desktop mr-1"></i> Sample Course (16:9)</span>
+                            <i class="fas fa-play-circle"></i>
+                        </button>
+                        <button onclick="openKeysModal('9:16')" class="text-left text-cyan font-bold text-xs uppercase tracking-widest hover:text-midnight hover:bg-cyan transition flex items-center justify-between bg-cyan/10 p-3 rounded border border-cyan/20">
+                            <span><i class="fas fa-mobile-alt mr-1"></i> Full Screen (9:16)</span>
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Drums -->
-                <div onclick="openDrumsModal()" class="glass-panel p-8 rounded-xl hover-glow-cyan border-t-4 border-t-cyan cursor-pointer group">
+                <div class="glass-panel p-8 rounded-xl hover-glow-cyan border-t-4 border-t-cyan group flex flex-col h-full transition-all">
                     <div class="w-16 h-16 rounded-lg bg-cyan/10 flex items-center justify-center mb-6 text-3xl text-cyan group-hover:scale-110 transition-transform">🥁</div>
                     <h3 class="text-3xl font-display text-offwhite tracking-wider mb-3">Drums</h3>
-                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-cyan transition-colors">Find the pocket. Understand dynamics, groove, and patterns that drive the song. <span class="block mt-2 text-cyan font-bold text-xs uppercase tracking-widest">Click to view sample course <i class="fas fa-external-link-alt"></i></span></p>
+                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-cyan transition-colors mb-6">Find the pocket. Understand dynamics, groove, and patterns that drive the song.</p>
+                    
+                    <div class="mt-auto flex flex-col gap-2">
+                        <button onclick="openDrumsModal('16:9')" class="text-left text-cyan font-bold text-xs uppercase tracking-widest hover:text-midnight hover:bg-cyan transition flex items-center justify-between bg-cyan/10 p-3 rounded border border-cyan/20">
+                            <span><i class="fas fa-desktop mr-1"></i> Sample Course (16:9)</span>
+                            <i class="fas fa-play-circle"></i>
+                        </button>
+                        <button onclick="openDrumsModal('9:16')" class="text-left text-gold font-bold text-xs uppercase tracking-widest hover:text-midnight hover:bg-gold transition flex items-center justify-between bg-gold/10 p-3 rounded border border-gold/20">
+                            <span><i class="fas fa-mobile-alt mr-1"></i> Full Screen (9:16)</span>
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Vocals -->
-                <div onclick="openVocalsModal()" class="glass-panel p-8 rounded-xl hover-glow-gold border-t-4 border-t-gold cursor-pointer group">
+                <div class="glass-panel p-8 rounded-xl hover-glow-gold border-t-4 border-t-gold group flex flex-col h-full transition-all">
                     <div class="w-16 h-16 rounded-lg bg-gold/10 flex items-center justify-center mb-6 text-3xl text-gold group-hover:scale-110 transition-transform">🎤</div>
                     <h3 class="text-3xl font-display text-offwhite tracking-wider mb-3">Vocals</h3>
-                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-gold transition-colors">Breath control, harmony, range expansion, and carrying the heart of a minister. <span class="block mt-2 text-gold font-bold text-xs uppercase tracking-widest">Click to view sample course <i class="fas fa-external-link-alt"></i></span></p>
-                </div>
-            </div>
-            
-            <div class="mt-12 glass-panel p-4 rounded-sm flex items-center justify-center gap-3 border-cyan/30 text-cyan font-display text-xl uppercase tracking-widest text-neon-cyan animate-pulse-glow-cyan max-w-2xl mx-auto text-center">
-                <i class="fas fa-fire"></i> Pro Tip: Every track includes band labs & live encounters!
-            </div>
-        </div>
-    </section>
-
-    <!-- Spotify Playlist Style Curriculum -->
-    <section id="playlist" class="py-24 bg-[#080d12] relative border-t border-white/5">
-        <div class="container mx-auto px-4 lg:px-12">
-            
-            <div class="mb-16 text-center">
-                <p class="font-display text-gold text-xl uppercase tracking-[0.2em] mb-2 text-neon-gold">// The Setlist</p>
-                <h2 class="text-6xl md:text-8xl font-display text-offwhite uppercase tracking-tighter">
-                    Deep Dive <span class="text-cyan text-neon-cyan">Curriculum</span>
-                </h2>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-24">
-                
-                <!-- PLAYLIST 1: MUSIC THEORY -->
-                <div class="glass-panel p-6 rounded-xl border border-white/5">
-                    <div class="flex items-end gap-6 mb-8 border-b border-white/10 pb-6">
-                        <div class="w-24 h-24 bg-gradient-to-br from-cyan to-midnight rounded-md flex items-center justify-center shadow-[0_0_15px_rgba(0,255,255,0.2)] shrink-0">
-                            <i class="fas fa-sliders-h text-3xl text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-4xl font-display text-offwhite uppercase tracking-tight">Theory & Mastery</h3>
-                            <p class="text-sm font-display text-cyan tracking-widest mt-1">5 Tracks • 10 Days</p>
-                        </div>
-                    </div>
+                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-gold transition-colors mb-6">Breath control, harmony, range expansion, and carrying the heart of a minister.</p>
                     
-                    <div class="space-y-1">
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">01</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Fundamentals & Scales</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Intro, Major Scale Formation, Minor Scales.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">02</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Chords & Harmony</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Triads, Sevenths, Suspended, Complex Formations.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">03</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Chord Progressions</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Roman Numeral Analysis (I-IV-V, etc.), Technical Terms.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">04</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Rhythm & Application</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Time Signatures, Groove, Chord Colors.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-cyan/10 hover:border-l-4 hover:border-cyan transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-cyan">05</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-cyan">Playing Worship Songs</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Working as a unified band, Musicianship, Practice habits.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PLAYLIST 2: WORSHIP LEADERSHIP -->
-                <div class="glass-panel p-6 rounded-xl border border-white/5">
-                    <div class="flex items-end gap-6 mb-8 border-b border-white/10 pb-6">
-                        <div class="w-24 h-24 bg-gradient-to-br from-gold to-midnight rounded-md flex items-center justify-center shadow-[0_0_15px_rgba(255,215,0,0.2)] shrink-0">
-                            <i class="fas fa-fire text-3xl text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-4xl font-display text-offwhite uppercase tracking-tight">Worship Leadership</h3>
-                            <p class="text-sm font-display text-gold tracking-widest mt-1">10 Tracks • 10 Days</p>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-1 h-[360px] overflow-y-auto pr-2">
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">01</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Worship Vision</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Core purpose, biblical foundation, prophetic direction.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">02</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Lifestyle of a Worshiper</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Intimacy with God, public ministry from private devotion.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">03</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Realm of the Spirit</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Sensing movement, discerning atmosphere, flowing.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">04</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">The Leader's Role</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Shepherd, priest, and musical director.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">05</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Spirit, Word & Worship</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Balancing theological depth with spiritual vitality.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">06</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Local Church Ministry</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Recruitment, training, discipleship, team culture.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">07</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Worship and Warfare</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Praise as a weapon, shifting atmospheres.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">08</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Choosing Worship Songs</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Curating setlists, serving the congregation.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">09</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Impact of Music</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Spiritual, physical, and emotional impact.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-3 rounded-md hover:bg-gold/10 hover:border-l-4 hover:border-gold transition-all group">
-                            <span class="text-gray-500 font-display text-xl w-6 text-right mt-0.5 group-hover:text-gold">10</span>
-                            <div>
-                                <h4 class="font-display text-offwhite text-xl tracking-wide group-hover:text-gold">Emerging Paradigms</h4>
-                                <p class="text-graytext text-xs font-body mt-1">Navigating trends, tech, and future directions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            
-            <!-- COURSE FEE BANNER -->
-            <div class="mt-20 max-w-5xl mx-auto glass-panel p-1 rounded-2xl overflow-hidden relative">
-                <!-- Animated gradient background behind the inner card -->
-                <div class="absolute inset-0 bg-gradient-to-r from-cyan/20 via-midnight to-gold/20 opacity-60"></div>
-                
-                <div class="bg-[#080d12]/90 backdrop-blur-xl p-8 md:p-10 rounded-xl relative z-10 flex flex-col md:flex-row items-center justify-between border border-white/5 gap-8">
-                    
-                    <div class="text-center md:text-left md:w-1/3">
-                        <p class="font-display text-gold text-lg uppercase tracking-widest text-neon-gold mb-1">// Join the Experience</p>
-                        <h3 class="text-5xl font-display text-offwhite tracking-tighter uppercase mb-2">COURSE <span class="text-cyan text-neon-cyan">FEE</span></h3>
-                        <p class="font-body text-sm text-graytext">Secure your spot for the ultimate 10-day worship music intensive.</p>
-                    </div>
-                    
-                    <div class="flex flex-col sm:flex-row items-center gap-4 md:gap-8 md:w-2/3 justify-end w-full">
-                        <!-- Residential -->
-                        <div class="glass-panel px-6 py-6 rounded-xl border-t-2 border-cyan text-center w-full sm:w-auto hover-glow-cyan group transition-all duration-300">
-                            <p class="font-display text-graytext text-xl tracking-widest uppercase mb-1 group-hover:text-white transition">Residential</p>
-                            <p class="text-4xl md:text-5xl font-display text-cyan tracking-wider">Rs. 8000/-</p>
-                        </div>
-                        
-                        <!-- Non-Residential -->
-                        <div class="glass-panel px-6 py-6 rounded-xl border-t-2 border-gold text-center w-full sm:w-auto hover-glow-gold group transition-all duration-300">
-                            <p class="font-display text-graytext text-xl tracking-widest uppercase mb-1 group-hover:text-white transition">Non-Residential</p>
-                            <p class="text-4xl md:text-5xl font-display text-gold tracking-wider">Rs. 5000/-</p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Final CTA Footer -->
-    <section class="py-24 bg-midnight relative overflow-hidden border-t border-white/5 text-center">
-        <div class="absolute inset-0 bg-gradient-to-t from-cyan/10 to-transparent pointer-events-none"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <p class="font-display text-cyan text-xl uppercase tracking-[0.2em] mb-4 text-neon-cyan">// Don't sleep on this</p>
-            <h2 class="text-7xl md:text-9xl font-display text-offwhite uppercase tracking-tighter mb-10 drop-shadow-2xl">
-                Ready to <span class="text-gold text-neon-gold">Jam?</span>
-            </h2>
-            
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-block px-16 py-6 btn-solid-cyan font-display text-4xl uppercase tracking-widest rounded-sm animate-pulse-glow-cyan">
-                Click to Register 🔥
-            </a>
-            
-            <div class="mt-16 flex flex-col items-center w-full">
-                <a href="https://www.instagram.com/nym.india?igsh=eWdwNW51MXQzd3J1" target="_blank" class="flex items-center gap-3 text-graytext hover:text-cyan transition mb-16">
-                    <div class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-2xl border-cyan/30">
-                        <i class="fab fa-instagram text-cyan"></i>
-                    </div>
-                    <span class="font-display text-2xl uppercase tracking-widest">Follow @nym.india</span>
-                </a>
-                
-                <div class="w-full max-w-6xl mx-auto border-t border-white/10 pt-16">
-                    <h3 class="font-display text-4xl text-white mb-8 tracking-widest uppercase">For More Details</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Contact 1 -->
-                        <div class="glass-panel p-6 rounded-xl border-t-2 border-cyan text-left hover-glow-cyan transition-all group">
-                            <h4 class="font-display text-2xl text-offwhite tracking-wider mb-1">Rev. Dr. Jacob Mathew</h4>
-                            <p class="text-cyan font-bold text-xs uppercase tracking-widest mb-6 font-body">NYM Director</p>
-                            <a href="https://wa.me/919007275443" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 font-display text-2xl text-graytext group-hover:text-white transition">
-                                <i class="fab fa-whatsapp text-[#25D366]"></i> +91 90072 75443
-                            </a>
-                        </div>
-                        
-                        <!-- Contact 2 -->
-                        <div class="glass-panel p-6 rounded-xl border-t-2 border-gold text-left hover-glow-gold transition-all group">
-                            <h4 class="font-display text-2xl text-offwhite tracking-wider mb-1">Rev. Arpan Chettri</h4>
-                            <p class="text-gold font-bold text-xs uppercase tracking-widest mb-6 font-body">AGEI Youth Director</p>
-                            <a href="https://wa.me/917002298093" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 font-display text-2xl text-graytext group-hover:text-white transition">
-                                <i class="fab fa-whatsapp text-[#25D366]"></i> +91 70022 98093
-                            </a>
-                        </div>
-                        
-                        <!-- Contact 3 -->
-                        <div class="glass-panel p-6 rounded-xl border-t-2 border-cyan text-left hover-glow-cyan transition-all group">
-                            <h4 class="font-display text-2xl text-offwhite tracking-wider mb-1">Rev. Dr. Sunny Prasad</h4>
-                            <p class="text-cyan font-bold text-xs uppercase tracking-widest mb-6 font-body">Workshop Director</p>
-                            <a href="https://wa.me/919844105095" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 font-display text-2xl text-graytext group-hover:text-white transition">
-                                <i class="fab fa-whatsapp text-[#25D366]"></i> +91 98441 05095
-                            </a>
-                        </div>
+                    <div class="mt-auto flex flex-col gap-2">
+                        <button onclick="openVocalsModal('16:9')" class="text-left text-gold font-bold text-xs uppercase tracking-widest hover:text-midnight hover:bg-gold transition flex items-center justify-between bg-gold/10 p-3 rounded border border-gold/20">
+                            <span><i class="fas fa-desktop mr-1"></i> Sample Course (16:9)</span>
+                            <i class="fas fa-play-circle"></i>
+                        </button>
+                        <button onclick="openVocalsModal('9:16')" class="text-left text-cyan font-bold text-xs uppercase tracking-widest hover:text-midnight hover:bg-cyan transition flex items-center justify-between bg-cyan/10 p-3 rounded border border-cyan/20">
+                            <span><i class="fas fa-mobile-alt mr-1"></i> Full Screen (9:16)</span>
+                            <i class="fas fa-expand"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -567,7 +365,7 @@
             <button onclick="closeGuitarModal()" class="absolute top-3 right-3 md:top-4 md:right-4 text-gray-500 hover:text-cyan text-2xl transition-colors z-20 bg-midnight/80 md:bg-transparent w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-times"></i></button>
             <h3 class="text-3xl md:text-4xl font-display text-white mb-4 md:mb-6 tracking-widest text-center uppercase pt-14 md:pt-0 px-4 shrink-0">Guitar <span class="text-cyan text-neon-cyan">Track</span></h3>
             
-            <div class="w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center">
+            <div id="guitarIframeContainer" class="w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center transition-all duration-300">
                 <!-- Embedded Gamma Presentation -->
                 <iframe src="https://gamma.app/embed/fgwxmudh9zlyij6" class="absolute inset-0 w-full h-full border-none" allow="fullscreen" title="Worship Guitar Theory Crash Course: 10-Day Glow-Up"></iframe>
             </div>
@@ -580,7 +378,7 @@
             <button onclick="closeKeysModal()" class="absolute top-3 right-3 md:top-4 md:right-4 text-gray-500 hover:text-gold text-2xl transition-colors z-20 bg-midnight/80 md:bg-transparent w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-times"></i></button>
             <h3 class="text-3xl md:text-4xl font-display text-white mb-4 md:mb-6 tracking-widest text-center uppercase pt-14 md:pt-0 px-4 shrink-0">Keys <span class="text-gold text-neon-gold">Track</span></h3>
             
-            <div class="w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center">
+            <div id="keysIframeContainer" class="w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center transition-all duration-300">
                 <!-- Embedded Gamma Presentation -->
                 <iframe src="https://gamma.app/embed/6tumr3vt5418fn5" class="absolute inset-0 w-full h-full border-none" allow="fullscreen" title="Enrich Worship Music Workshop 2026: Worship Keyboard Theory Crash Course (Sample)"></iframe>
             </div>
@@ -593,7 +391,7 @@
             <button onclick="closeDrumsModal()" class="absolute top-3 right-3 md:top-4 md:right-4 text-gray-500 hover:text-cyan text-2xl transition-colors z-20 bg-midnight/80 md:bg-transparent w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-times"></i></button>
             <h3 class="text-3xl md:text-4xl font-display text-white mb-4 md:mb-6 tracking-widest text-center uppercase pt-14 md:pt-0 px-4 shrink-0">Drums <span class="text-cyan text-neon-cyan">Track</span></h3>
             
-            <div class="w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center">
+            <div id="drumsIframeContainer" class="w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center transition-all duration-300">
                 <!-- Embedded Gamma Presentation -->
                 <iframe src="https://gamma.app/embed/z9t3zc93jjl5ar1" class="absolute inset-0 w-full h-full border-none" allow="fullscreen" title="Enrich Worship→Drums 🥁"></iframe>
             </div>
@@ -606,7 +404,7 @@
             <button onclick="closeVocalsModal()" class="absolute top-3 right-3 md:top-4 md:right-4 text-gray-500 hover:text-gold text-2xl transition-colors z-20 bg-midnight/80 md:bg-transparent w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-times"></i></button>
             <h3 class="text-3xl md:text-4xl font-display text-white mb-4 md:mb-6 tracking-widest text-center uppercase pt-14 md:pt-0 px-4 shrink-0">Vocals <span class="text-gold text-neon-gold">Track</span></h3>
             
-            <div class="w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center">
+            <div id="vocalsIframeContainer" class="w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center transition-all duration-300">
                 <!-- Embedded Gamma Presentation -->
                 <iframe src="https://gamma.app/embed/2vk3s6nfi3l1lmq" class="absolute inset-0 w-full h-full border-none" allow="fullscreen" title="Enrich Worship Vocal Workshop"></iframe>
             </div>
@@ -687,8 +485,21 @@
             }, 300); // Wait for CSS transition to finish
         }
 
+        // Helper to set Aspect Ratio for Modals
+        function setModalAspectRatio(track, ratio) {
+            const container = document.getElementById(track + 'IframeContainer');
+            if (!container) return;
+            
+            if (ratio === '9:16') {
+                container.className = "w-full flex-grow md:flex-grow-0 md:h-[75vh] md:aspect-[9/16] rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center mx-auto transition-all duration-300";
+            } else {
+                container.className = "w-full flex-grow md:flex-grow-0 md:aspect-video rounded-none md:rounded-xl overflow-hidden border-t md:border border-white/10 bg-midnight relative flex justify-center transition-all duration-300";
+            }
+        }
+
         // Guitar Popup Logic
-        function openGuitarModal() {
+        function openGuitarModal(ratio = '16:9') {
+            setModalAspectRatio('guitar', ratio);
             const modal = document.getElementById('guitarModal');
             const card = document.getElementById('guitarCard');
             modal.classList.remove('hidden');
@@ -713,7 +524,8 @@
         }
 
         // Keys Popup Logic
-        function openKeysModal() {
+        function openKeysModal(ratio = '16:9') {
+            setModalAspectRatio('keys', ratio);
             const modal = document.getElementById('keysModal');
             const card = document.getElementById('keysCard');
             modal.classList.remove('hidden');
@@ -738,7 +550,8 @@
         }
 
         // Drums Popup Logic
-        function openDrumsModal() {
+        function openDrumsModal(ratio = '16:9') {
+            setModalAspectRatio('drums', ratio);
             const modal = document.getElementById('drumsModal');
             const card = document.getElementById('drumsCard');
             modal.classList.remove('hidden');
@@ -763,7 +576,8 @@
         }
 
         // Vocals Popup Logic
-        function openVocalsModal() {
+        function openVocalsModal(ratio = '16:9') {
+            setModalAspectRatio('vocals', ratio);
             const modal = document.getElementById('vocalsModal');
             const card = document.getElementById('vocalsCard');
             modal.classList.remove('hidden');
