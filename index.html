@@ -243,44 +243,6 @@
                 </a>
             </div>
             
-            <!-- Track Icons Row (Responsive Layout) -->
-            <div data-aos="fade-up" data-aos-delay="600" class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-12 w-full max-w-5xl border-t border-white/10 pt-10 md:pt-12">
-                
-                <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=200&h=200&q=80" alt="Guitar Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Guitar</span>
-                </div>
-                
-                <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=200&h=200&q=80" alt="Keyboard Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Keys</span>
-                </div>
-                
-                <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=200&h=200&q=80" alt="Drums Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Drums</span>
-                </div>
-                
-                <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1433622070098-754fdf81c929?auto=format&fit=crop&w=200&h=200&q=80" alt="Vocals Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Vocals</span>
-                </div>
-                
-                <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=200&h=200&q=80" alt="Media Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Media</span>
-                </div>
-            </div>
         </div>
     </header>
 
@@ -302,8 +264,8 @@
                 
                 <!-- Guitar -->
                 <div data-aos="fade-up" data-aos-delay="100" onclick="openGuitarModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
-                        <i class="fas fa-guitar"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden mb-4 md:mb-6 shrink-0 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(255,0,170,0.4)]">
+                        <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=200&h=200&q=80" alt="Guitar Track" class="w-full h-full object-cover rounded-full border-4 border-cardBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
                     <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Guitar</h3>
                     <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Master modern worship vibes. Focus on chord voicing, fingerstyle, and lead lines.</p>
@@ -314,8 +276,8 @@
 
                 <!-- Keyboard -->
                 <div data-aos="fade-up" data-aos-delay="200" onclick="openKeysModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-cyan/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-cyan group-hover:scale-110 transition-transform">
-                        <i class="fas fa-keyboard"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden mb-4 md:mb-6 shrink-0 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(255,0,170,0.4)]">
+                        <img src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=200&h=200&q=80" alt="Keyboard Track" class="w-full h-full object-cover rounded-full border-4 border-cardBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
                     <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Keys</h3>
                     <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Unlock progressions, padding, layering sounds, and the art of prophetic flow.</p>
@@ -326,8 +288,8 @@
 
                 <!-- Drums -->
                 <div data-aos="fade-up" data-aos-delay="300" onclick="openDrumsModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
-                        <i class="fas fa-drum"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden mb-4 md:mb-6 shrink-0 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(255,0,170,0.4)]">
+                        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=200&h=200&q=80" alt="Drums Track" class="w-full h-full object-cover rounded-full border-4 border-cardBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
                     <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Drums</h3>
                     <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Find the pocket. Understand dynamics, groove, and patterns that drive the song.</p>
@@ -338,8 +300,8 @@
 
                 <!-- Vocals -->
                 <div data-aos="fade-up" data-aos-delay="400" onclick="openVocalsModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-cyan/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-cyan group-hover:scale-110 transition-transform">
-                        <i class="fas fa-microphone-alt"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden mb-4 md:mb-6 shrink-0 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(255,0,170,0.4)]">
+                        <img src="https://images.unsplash.com/photo-1433622070098-754fdf81c929?auto=format&fit=crop&w=200&h=200&q=80" alt="Vocals Track" class="w-full h-full object-cover rounded-full border-4 border-cardBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
                     <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Vocals</h3>
                     <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Breath control, harmony, range expansion, and carrying the heart of a minister.</p>
@@ -350,8 +312,8 @@
 
                 <!-- Media -->
                 <div data-aos="fade-up" data-aos-delay="500" onclick="openMediaModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
-                        <i class="fas fa-camera"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden mb-4 md:mb-6 shrink-0 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(255,0,170,0.4)]">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=200&h=200&q=80" alt="Media Track" class="w-full h-full object-cover rounded-full border-4 border-cardBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
                     <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Media</h3>
                     <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Master Sunday mixing, recording, stage setup & live streaming.</p>
