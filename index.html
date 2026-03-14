@@ -128,17 +128,13 @@
                 0 0 40px rgba(255, 215, 0, 0.5);
         }
 
-        /* Colorful Animated 3D Text */
-        .text-colorful {
+        /* 3D Title Effect */
+        .title-3d {
             position: relative;
-            background: linear-gradient(to right, #FFFFFF, #FFD700, #FFFFFF, #FFD700);
-            background-size: 300% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textGradient 5s linear infinite;
+            z-index: 1;
         }
         
-        .text-colorful::after {
+        .title-3d::after {
             content: attr(data-text);
             position: absolute;
             left: 0;
@@ -158,11 +154,6 @@
                 6px 6px 0px #00404c,
                 8px 8px 15px rgba(0,0,0,0.8),
                 0 0 30px rgba(0, 212, 255, 0.5);
-        }
-        
-        @keyframes textGradient {
-            0% { background-position: 0% center; }
-            100% { background-position: 300% center; }
         }
 
         /* Custom Scrollbar */
@@ -223,8 +214,8 @@
         <div class="container mx-auto px-4 lg:px-12 relative z-10 flex flex-col items-center text-center mt-16">
             
             <!-- Main Title -->
-            <h1 data-aos="zoom-in" data-aos-duration="1000" data-text="ENRICH 2026" class="text-[4rem] sm:text-[6rem] md:text-[8rem] font-display font-black uppercase tracking-tighter leading-none mb-2 text-colorful">
-                ENRICH 2026
+            <h1 data-aos="zoom-in" data-aos-duration="1000" data-text="ENRICH 2026" class="text-[4rem] sm:text-[6rem] md:text-[8rem] font-display font-black uppercase tracking-tighter leading-none mb-2 title-3d">
+                <span class="text-white">ENRICH</span> <span class="text-gold">2026</span>
             </h1>
             
             <!-- Subtitle -->
@@ -327,7 +318,7 @@
                 <div data-aos="fade-up" data-aos-delay="500" onclick="openMediaModal()" class="glass-panel p-6 lg:p-8 rounded-xl hover-glow-cyan border-t-4 border-t-cyan cursor-pointer group">
                     <div class="w-16 h-16 rounded-lg bg-cyan/10 flex items-center justify-center mb-6 text-3xl text-cyan group-hover:scale-110 transition-transform">🎥</div>
                     <h3 class="text-3xl font-display font-bold text-offwhite tracking-wider mb-3">Media</h3>
-                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-cyan transition-colors">Visual storytelling, live streaming, photography, and capturing the atmosphere. <span class="block mt-4 text-cyan font-bold text-[10px] lg:text-xs uppercase tracking-widest">Click to view course <i class="fas fa-external-link-alt"></i></span></p>
+                    <p class="text-graytext font-body text-sm leading-relaxed group-hover:text-cyan transition-colors">Master Sunday mixing, recording, stage setup & live streaming <span class="block mt-4 text-cyan font-bold text-[10px] lg:text-xs uppercase tracking-widest">Click to view course <i class="fas fa-external-link-alt"></i></span></p>
                 </div>
             </div>
             
