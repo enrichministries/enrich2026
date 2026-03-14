@@ -168,14 +168,14 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-deepBg/90 backdrop-blur-xl border-b border-white/5 top-0 transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center relative z-10">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center relative z-10">
             <!-- Branding -->
             <div class="flex items-center space-x-3 cursor-pointer">
-                <div class="h-10 w-10 rounded-xl border border-magenta/40 bg-cardBg flex items-center justify-center overflow-hidden shadow-[0_0_15px_rgba(255,0,170,0.2)]">
+                <div class="h-8 w-8 md:h-10 md:w-10 rounded-xl border border-magenta/40 bg-cardBg flex items-center justify-center overflow-hidden shadow-[0_0_15px_rgba(255,0,170,0.2)]">
                     <img src="images/image nym_1.jpg" alt="AG Logo" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-display text-xl font-bold text-white tracking-widest leading-none">NYM <span class="text-magenta text-[10px] uppercase ml-1">Enrich '26</span></span>
+                    <span class="font-display text-lg md:text-xl font-bold text-white tracking-widest leading-none">NYM <span class="text-magenta text-[8px] md:text-[10px] uppercase ml-1">Enrich '26</span></span>
                 </div>
             </div>
 
@@ -193,17 +193,17 @@
             </div>
             
             <!-- Mobile Toggle -->
-            <button id="mobile-menu-btn" class="md:hidden text-muted hover:text-magenta focus:outline-none text-2xl">
+            <button id="mobile-menu-btn" class="md:hidden text-muted hover:text-magenta focus:outline-none text-2xl p-2">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-deepBg/95 backdrop-blur-3xl border-t border-white/5 fixed inset-0 top-[72px] h-[calc(100dvh-72px)] flex flex-col pt-8 px-6 gap-6 z-40 overflow-y-auto pb-10">
-            <a href="#home" class="text-2xl font-display font-bold text-white hover:text-cyan transition border-b border-white/5 pb-4">Overview</a>
-            <a href="#vault" class="text-2xl font-display font-bold text-white hover:text-magenta transition border-b border-white/5 pb-4">Tracks</a>
-            <a href="#playlist" class="text-2xl font-display font-bold text-white hover:text-cyan transition border-b border-white/5 pb-4">Setlist</a>
-            <a href="#details" class="text-2xl font-display font-bold text-white hover:text-gold transition border-b border-white/5 pb-4">Venue & Info</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-deepBg/95 backdrop-blur-3xl border-t border-white/5 fixed inset-0 top-[64px] h-[calc(100dvh-64px)] flex flex-col pt-8 px-6 gap-6 z-40 overflow-y-auto pb-10">
+            <a href="#home" class="text-xl font-display font-bold text-white hover:text-cyan transition border-b border-white/5 pb-4">Overview</a>
+            <a href="#vault" class="text-xl font-display font-bold text-white hover:text-magenta transition border-b border-white/5 pb-4">Tracks</a>
+            <a href="#playlist" class="text-xl font-display font-bold text-white hover:text-cyan transition border-b border-white/5 pb-4">Setlist</a>
+            <a href="#details" class="text-xl font-display font-bold text-white hover:text-gold transition border-b border-white/5 pb-4">Venue & Info</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="mt-4 px-8 py-4 btn-register-green text-center uppercase font-display text-lg font-bold tracking-widest rounded-full shadow-lg">
                 Register Now
             </a>
@@ -218,144 +218,144 @@
         <div class="container mx-auto px-4 lg:px-12 relative z-10 flex flex-col items-center text-center mt-10">
             
             <!-- Music Pill Badge -->
-            <div data-aos="fade-down" class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-magenta/30 bg-purple/40 backdrop-blur-md text-white font-display text-xs font-bold tracking-[0.2em] uppercase mb-8 shadow-[0_0_20px_rgba(255,0,170,0.2)]">
+            <div data-aos="fade-down" class="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2 rounded-full border border-magenta/30 bg-purple/40 backdrop-blur-md text-white font-display text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-6 md:mb-8 shadow-[0_0_20px_rgba(255,0,170,0.2)]">
                 <i class="fas fa-music text-magenta animate-pulse"></i>
                 Worship Leadership Intensive
             </div>
             
-            <!-- Main Title -->
-            <h1 data-aos="zoom-in" data-aos-duration="1000" class="text-[4rem] sm:text-[6rem] md:text-[9rem] font-display font-black uppercase tracking-tighter leading-none mb-4 drop-shadow-2xl">
+            <!-- Main Title (Responsive Sizing) -->
+            <h1 data-aos="zoom-in" data-aos-duration="1000" class="text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] font-display font-black uppercase tracking-tighter leading-none mb-4 drop-shadow-2xl">
                 <span class="text-white">ENRICH</span> <span class="text-music-gradient block md:inline">2026</span>
             </h1>
             
-            <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-2xl font-body text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p data-aos="fade-up" data-aos-delay="200" class="text-base sm:text-lg md:text-2xl font-body text-muted max-w-2xl mx-auto mb-10 leading-relaxed px-2">
                 Forge the next generation of worship musicians. <br>
                 <span class="text-white font-semibold mt-2 inline-block">Level Up. Lead Bold. Learn Worship. ✨</span>
             </p>
             
             <!-- CTAs -->
-            <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row items-center gap-5 mb-16 w-full sm:w-auto">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-12 py-5 btn-music-primary font-display font-bold text-sm md:text-base uppercase tracking-widest rounded-full shadow-xl flex items-center justify-center gap-2">
+            <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row items-center gap-4 md:gap-5 mb-12 md:mb-16 w-full sm:w-auto px-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 md:px-12 py-4 md:py-5 btn-music-primary font-display font-bold text-xs md:text-sm uppercase tracking-widest rounded-full shadow-xl flex items-center justify-center gap-2">
                     Secure Your Spot <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#vault" class="w-full sm:w-auto px-12 py-5 border border-white/20 text-white hover:border-cyan hover:text-cyan transition-colors font-display font-bold text-sm md:text-base uppercase tracking-widest rounded-full flex items-center justify-center gap-2 bg-deepBg/50 backdrop-blur-sm">
+                <a href="#vault" class="w-full sm:w-auto px-8 md:px-12 py-4 md:py-5 border border-white/20 text-white hover:border-cyan hover:text-cyan transition-colors font-display font-bold text-xs md:text-sm uppercase tracking-widest rounded-full flex items-center justify-center gap-2 bg-deepBg/50 backdrop-blur-sm">
                     Explore Tracks
                 </a>
             </div>
             
-            <!-- Track Icons Row (Realistic Images in Vibrant Circles) -->
-            <div data-aos="fade-up" data-aos-delay="600" class="flex flex-wrap justify-center gap-6 md:gap-12 w-full max-w-5xl border-t border-white/10 pt-12">
+            <!-- Track Icons Row (Responsive Layout) -->
+            <div data-aos="fade-up" data-aos-delay="600" class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-12 w-full max-w-5xl border-t border-white/10 pt-10 md:pt-12">
                 
                 <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=200&h=200&q=80" alt="Guitar Track" class="w-full h-full object-cover rounded-full border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=200&h=200&q=80" alt="Guitar Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
-                    <span class="font-display uppercase tracking-widest mt-3 text-xs font-bold text-muted group-hover:text-white transition-colors">Guitar</span>
+                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Guitar</span>
                 </div>
                 
                 <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=200&h=200&q=80" alt="Keyboard Track" class="w-full h-full object-cover rounded-full border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=200&h=200&q=80" alt="Keyboard Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
-                    <span class="font-display uppercase tracking-widest mt-3 text-xs font-bold text-muted group-hover:text-white transition-colors">Keys</span>
+                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Keys</span>
                 </div>
                 
                 <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=200&h=200&q=80" alt="Drums Track" class="w-full h-full object-cover rounded-full border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=200&h=200&q=80" alt="Drums Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
-                    <span class="font-display uppercase tracking-widest mt-3 text-xs font-bold text-muted group-hover:text-white transition-colors">Drums</span>
+                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Drums</span>
                 </div>
                 
                 <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1433622070098-754fdf81c929?auto=format&fit=crop&w=200&h=200&q=80" alt="Vocals Track" class="w-full h-full object-cover rounded-full border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1433622070098-754fdf81c929?auto=format&fit=crop&w=200&h=200&q=80" alt="Vocals Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
-                    <span class="font-display uppercase tracking-widest mt-3 text-xs font-bold text-muted group-hover:text-white transition-colors">Vocals</span>
+                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Vocals</span>
                 </div>
                 
                 <div class="flex flex-col items-center group cursor-pointer" onclick="document.getElementById('vault').scrollIntoView({behavior: 'smooth'})">
-                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=200&h=200&q=80" alt="Media Track" class="w-full h-full object-cover rounded-full border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-[3px] border-transparent bg-gradient-to-tr from-purple via-magenta to-cyan p-[2px] overflow-hidden group-hover:shadow-[0_0_25px_rgba(255,0,170,0.5)] transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=200&h=200&q=80" alt="Media Track" class="w-full h-full object-cover rounded-full border-2 md:border-4 border-deepBg group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                     </div>
-                    <span class="font-display uppercase tracking-widest mt-3 text-xs font-bold text-muted group-hover:text-white transition-colors">Media</span>
+                    <span class="font-display uppercase tracking-widest mt-2 md:mt-3 text-[10px] md:text-xs font-bold text-muted group-hover:text-white transition-colors">Media</span>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- The Tracks (Vault) -->
-    <section id="vault" class="py-24 relative border-t border-white/5 bg-gradient-to-b from-deepBg to-cardBg/50">
+    <section id="vault" class="py-16 md:py-24 relative border-t border-white/5 bg-gradient-to-b from-deepBg to-cardBg/50">
         <div class="container mx-auto px-4 lg:px-12">
             
-            <div data-aos="fade-up" class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div data-aos="fade-up" class="mb-12 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6">
                 <div>
-                    <p class="font-display font-bold text-magenta text-sm uppercase tracking-[0.2em] mb-2">// Select Your Discipline</p>
-                    <h2 class="text-4xl md:text-6xl font-display font-black text-white uppercase tracking-tight">
+                    <p class="font-display font-bold text-magenta text-xs md:text-sm uppercase tracking-[0.2em] mb-2">// Select Your Discipline</p>
+                    <h2 class="text-3xl sm:text-4xl md:text-6xl font-display font-black text-white uppercase tracking-tight">
                         Workshop <span class="text-cyan">Tracks.</span>
                     </h2>
                 </div>
-                <p class="text-muted font-body text-sm md:text-base max-w-sm">Hands-on mastery, intensive band labs, and transformative live encounters. Required age: 13+</p>
+                <p class="text-muted font-body text-xs sm:text-sm md:text-base max-w-sm">Hands-on mastery, intensive band labs, and transformative live encounters. Required age: 13+</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
                 
                 <!-- Guitar -->
                 <div data-aos="fade-up" data-aos-delay="100" onclick="openGuitarModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-14 h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-6 text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
                         <i class="fas fa-guitar"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-white tracking-wide mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Guitar</h3>
-                    <p class="text-muted font-body text-sm leading-relaxed flex-grow">Master modern worship vibes. Focus on chord voicing, fingerstyle, and lead lines.</p>
-                    <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
+                    <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Guitar</h3>
+                    <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Master modern worship vibes. Focus on chord voicing, fingerstyle, and lead lines.</p>
+                    <div class="mt-4 md:mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
                         <span>View Course</span> <i class="fas fa-play text-magenta"></i>
                     </div>
                 </div>
 
                 <!-- Keyboard -->
                 <div data-aos="fade-up" data-aos-delay="200" onclick="openKeysModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-14 h-14 rounded-xl bg-purple/50 border border-cyan/20 flex items-center justify-center mb-6 text-2xl text-white group-hover:text-cyan group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-cyan/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-cyan group-hover:scale-110 transition-transform">
                         <i class="fas fa-keyboard"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-white tracking-wide mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Keys</h3>
-                    <p class="text-muted font-body text-sm leading-relaxed flex-grow">Unlock progressions, padding, layering sounds, and the art of prophetic flow.</p>
-                    <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
+                    <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Keys</h3>
+                    <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Unlock progressions, padding, layering sounds, and the art of prophetic flow.</p>
+                    <div class="mt-4 md:mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
                         <span>View Course</span> <i class="fas fa-play text-cyan"></i>
                     </div>
                 </div>
 
                 <!-- Drums -->
                 <div data-aos="fade-up" data-aos-delay="300" onclick="openDrumsModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-14 h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-6 text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
                         <i class="fas fa-drum"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-white tracking-wide mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Drums</h3>
-                    <p class="text-muted font-body text-sm leading-relaxed flex-grow">Find the pocket. Understand dynamics, groove, and patterns that drive the song.</p>
-                    <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
+                    <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Drums</h3>
+                    <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Find the pocket. Understand dynamics, groove, and patterns that drive the song.</p>
+                    <div class="mt-4 md:mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
                         <span>View Course</span> <i class="fas fa-play text-magenta"></i>
                     </div>
                 </div>
 
                 <!-- Vocals -->
                 <div data-aos="fade-up" data-aos-delay="400" onclick="openVocalsModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-14 h-14 rounded-xl bg-purple/50 border border-cyan/20 flex items-center justify-center mb-6 text-2xl text-white group-hover:text-cyan group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-cyan/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-cyan group-hover:scale-110 transition-transform">
                         <i class="fas fa-microphone-alt"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-white tracking-wide mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Vocals</h3>
-                    <p class="text-muted font-body text-sm leading-relaxed flex-grow">Breath control, harmony, range expansion, and carrying the heart of a minister.</p>
-                    <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
+                    <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Vocals</h3>
+                    <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Breath control, harmony, range expansion, and carrying the heart of a minister.</p>
+                    <div class="mt-4 md:mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
                         <span>View Course</span> <i class="fas fa-play text-cyan"></i>
                     </div>
                 </div>
 
                 <!-- Media -->
                 <div data-aos="fade-up" data-aos-delay="500" onclick="openMediaModal()" class="music-track-card p-6 lg:p-8 rounded-2xl cursor-pointer group flex flex-col h-full shadow-lg">
-                    <div class="w-14 h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-6 text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-purple/50 border border-magenta/20 flex items-center justify-center mb-4 md:mb-6 text-xl md:text-2xl text-white group-hover:text-magenta group-hover:scale-110 transition-transform">
                         <i class="fas fa-camera"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-white tracking-wide mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Media</h3>
-                    <p class="text-muted font-body text-sm leading-relaxed flex-grow">Master Sunday mixing, recording, stage setup & live streaming.</p>
-                    <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
+                    <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-wide mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-magenta group-hover:to-cyan transition-all">Media</h3>
+                    <p class="text-muted font-body text-xs md:text-sm leading-relaxed flex-grow">Master Sunday mixing, recording, stage setup & live streaming.</p>
+                    <div class="mt-4 md:mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-widest text-muted group-hover:text-white transition-colors">
                         <span>View Course</span> <i class="fas fa-play text-magenta"></i>
                     </div>
                 </div>
@@ -365,146 +365,146 @@
     </section>
 
     <!-- Deep Dive Curriculum / Setlist -->
-    <section id="playlist" class="py-24 bg-cardBg relative border-y border-white/5 shadow-2xl">
+    <section id="playlist" class="py-16 md:py-24 bg-cardBg relative border-y border-white/5 shadow-2xl">
         <div class="container mx-auto px-4 lg:px-12">
             
-            <div data-aos="fade-up" class="mb-16 text-center">
-                <p class="font-display font-bold text-cyan text-sm uppercase tracking-[0.2em] mb-2">// The Setlist</p>
-                <h2 class="text-4xl md:text-6xl font-display font-black text-white uppercase tracking-tight">
+            <div data-aos="fade-up" class="mb-12 md:mb-16 text-center">
+                <p class="font-display font-bold text-cyan text-xs md:text-sm uppercase tracking-[0.2em] mb-2">// The Setlist</p>
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-display font-black text-white uppercase tracking-tight">
                     Deep Dive <span class="text-music-gradient">Curriculum</span>
                 </h2>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-8">
+            <div class="grid lg:grid-cols-2 gap-6 md:gap-8">
                 
                 <!-- ALBUM 1: MUSIC THEORY -->
-                <div data-aos="fade-right" class="bg-deepBg border border-white/5 rounded-3xl p-8 shadow-xl">
-                    <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
-                        <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-magenta to-purple flex items-center justify-center text-2xl text-white shadow-lg">
+                <div data-aos="fade-right" class="bg-deepBg border border-white/5 rounded-3xl p-6 md:p-8 shadow-xl">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 md:mb-8 border-b border-white/10 pb-6 gap-4">
+                        <div class="flex items-center gap-4 md:gap-5">
+                            <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-magenta to-purple flex items-center justify-center text-xl md:text-2xl text-white shadow-lg shrink-0">
                                 <i class="fas fa-sliders-h"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-display font-black text-white tracking-tight">Theory & Mastery</h3>
-                                <p class="text-xs font-display font-bold text-magenta tracking-widest mt-1 uppercase">EP • 5 Tracks</p>
+                                <h3 class="text-xl md:text-3xl font-display font-black text-white tracking-tight">Theory & Mastery</h3>
+                                <p class="text-[10px] md:text-xs font-display font-bold text-magenta tracking-widest mt-1 uppercase">EP • 5 Tracks</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="space-y-2">
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-magenta">01</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-magenta">01</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm md:text-base tracking-wide group-hover:text-cyan transition-colors">Fundamentals & Scales</h4>
-                                <p class="text-muted text-xs font-body mt-1">Intro, Major Scale Formation, Minor Scales.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-cyan transition-colors">Fundamentals & Scales</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Intro, Major Scale Formation, Minor Scales.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-magenta">02</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-magenta">02</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm md:text-base tracking-wide group-hover:text-cyan transition-colors">Chords & Harmony</h4>
-                                <p class="text-muted text-xs font-body mt-1">Triads, Sevenths, Suspended, Complex Formations.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-cyan transition-colors">Chords & Harmony</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Triads, Sevenths, Suspended, Complex Formations.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-magenta">03</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-magenta">03</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm md:text-base tracking-wide group-hover:text-cyan transition-colors">Chord Progressions</h4>
-                                <p class="text-muted text-xs font-body mt-1">Roman Numeral Analysis (I-IV-V, etc.), Technical Terms.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-cyan transition-colors">Chord Progressions</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Roman Numeral Analysis (I-IV-V, etc.), Technical Terms.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-magenta">04</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-magenta">04</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm md:text-base tracking-wide group-hover:text-cyan transition-colors">Rhythm & Application</h4>
-                                <p class="text-muted text-xs font-body mt-1">Time Signatures, Groove, Chord Colors.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-cyan transition-colors">Rhythm & Application</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Time Signatures, Groove, Chord Colors.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-magenta">05</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-magenta">05</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm md:text-base tracking-wide group-hover:text-cyan transition-colors">Playing Worship Songs</h4>
-                                <p class="text-muted text-xs font-body mt-1">Working as a unified band, Musicianship, Practice habits.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-cyan transition-colors">Playing Worship Songs</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Working as a unified band, Musicianship, Practice habits.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-magenta transition-colors text-xs md:text-base"></i>
                         </div>
                     </div>
                 </div>
 
                 <!-- ALBUM 2: WORSHIP LEADERSHIP -->
-                <div data-aos="fade-left" class="bg-deepBg border border-white/5 rounded-3xl p-8 shadow-xl">
-                    <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
-                        <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan to-purple flex items-center justify-center text-2xl text-white shadow-lg">
+                <div data-aos="fade-left" class="bg-deepBg border border-white/5 rounded-3xl p-6 md:p-8 shadow-xl">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 md:mb-8 border-b border-white/10 pb-6 gap-4">
+                        <div class="flex items-center gap-4 md:gap-5">
+                            <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-cyan to-purple flex items-center justify-center text-xl md:text-2xl text-white shadow-lg shrink-0">
                                 <i class="fas fa-fire"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-display font-black text-white tracking-tight">Worship Leadership</h3>
-                                <p class="text-xs font-display font-bold text-cyan tracking-widest mt-1 uppercase">LP • 10 Tracks</p>
+                                <h3 class="text-xl md:text-3xl font-display font-black text-white tracking-tight">Worship Leadership</h3>
+                                <p class="text-[10px] md:text-xs font-display font-bold text-cyan tracking-widest mt-1 uppercase">LP • 10 Tracks</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="space-y-2 h-[340px] overflow-y-auto pr-2">
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-cyan">01</span>
+                    <div class="space-y-2 h-[300px] md:h-[340px] overflow-y-auto pr-2">
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-cyan">01</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm tracking-wide group-hover:text-magenta transition-colors">Worship Vision</h4>
-                                <p class="text-muted text-xs font-body mt-1">Core purpose, biblical foundation, prophetic direction.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-magenta transition-colors">Worship Vision</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Core purpose, biblical foundation, prophetic direction.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-cyan">02</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-cyan">02</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm tracking-wide group-hover:text-magenta transition-colors">Lifestyle of a Worshiper</h4>
-                                <p class="text-muted text-xs font-body mt-1">Intimacy with God, public ministry from private devotion.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-magenta transition-colors">Lifestyle of a Worshiper</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Intimacy with God, public ministry from private devotion.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-cyan">03</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-cyan">03</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm tracking-wide group-hover:text-magenta transition-colors">Realm of the Spirit</h4>
-                                <p class="text-muted text-xs font-body mt-1">Sensing movement, discerning atmosphere, flowing.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-magenta transition-colors">Realm of the Spirit</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Sensing movement, discerning atmosphere, flowing.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-cyan">04</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-cyan">04</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm tracking-wide group-hover:text-magenta transition-colors">The Leader's Role</h4>
-                                <p class="text-muted text-xs font-body mt-1">Shepherd, priest, and musical director.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-magenta transition-colors">The Leader's Role</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Shepherd, priest, and musical director.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-cyan">05</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-cyan">05</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm tracking-wide group-hover:text-magenta transition-colors">Spirit, Word & Worship</h4>
-                                <p class="text-muted text-xs font-body mt-1">Balancing theological depth with spiritual vitality.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-magenta transition-colors">Spirit, Word & Worship</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Balancing theological depth with spiritual vitality.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-cyan">06</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-cyan">06</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm tracking-wide group-hover:text-magenta transition-colors">Local Church Ministry</h4>
-                                <p class="text-muted text-xs font-body mt-1">Recruitment, training, discipleship, team culture.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-magenta transition-colors">Local Church Ministry</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Recruitment, training, discipleship, team culture.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors text-xs md:text-base"></i>
                         </div>
-                        <div class="flex items-center gap-4 setlist-item p-3 rounded-lg group">
-                            <span class="text-white/30 font-display font-bold text-lg w-8 text-right group-hover:text-cyan">07</span>
+                        <div class="flex items-center gap-3 md:gap-4 setlist-item p-2 md:p-3 rounded-lg group">
+                            <span class="text-white/30 font-display font-bold text-base md:text-lg w-6 md:w-8 text-right group-hover:text-cyan">07</span>
                             <div class="flex-grow">
-                                <h4 class="font-display font-bold text-white text-sm tracking-wide group-hover:text-magenta transition-colors">Worship and Warfare</h4>
-                                <p class="text-muted text-xs font-body mt-1">Praise as a weapon, shifting atmospheres.</p>
+                                <h4 class="font-display font-bold text-white text-xs md:text-sm tracking-wide group-hover:text-magenta transition-colors">Worship and Warfare</h4>
+                                <p class="text-muted text-[10px] md:text-xs font-body mt-0.5 md:mt-1">Praise as a weapon, shifting atmospheres.</p>
                             </div>
-                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors"></i>
+                            <i class="fas fa-play text-white/10 group-hover:text-cyan transition-colors text-xs md:text-base"></i>
                         </div>
                     </div>
                 </div>
@@ -513,9 +513,9 @@
     </section>
 
     <!-- Logistics Banner -->
-    <section id="details" class="py-24 relative bg-deepBg scroll-mt-20 overflow-hidden">
+    <section id="details" class="py-16 md:py-24 relative bg-deepBg scroll-mt-20 overflow-hidden">
         <!-- Abstract gradient blob -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-magenta/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[800px] h-[300px] bg-magenta/10 rounded-full blur-[80px] md:blur-[100px] pointer-events-none"></div>
 
         <div class="container mx-auto px-4 lg:px-12 relative z-10">
             <div data-aos="zoom-in" class="max-w-5xl mx-auto border border-white/10 bg-cardBg rounded-3xl overflow-hidden shadow-2xl relative">
@@ -525,34 +525,34 @@
                 <div class="grid grid-cols-1 md:grid-cols-3">
                     
                     <!-- Left: Details -->
-                    <div class="p-10 md:col-span-2 border-b md:border-b-0 md:border-r border-white/10">
+                    <div class="p-6 sm:p-8 md:p-10 md:col-span-2 border-b md:border-b-0 md:border-r border-white/10">
                         <p class="font-display font-bold text-cyan text-xs uppercase tracking-[0.2em] mb-4">// Join the Experience</p>
-                        <h3 class="text-3xl md:text-5xl font-display font-black text-white tracking-tighter uppercase mb-8">Workshop <span class="text-magenta">Dates & Venue</span></h3>
+                        <h3 class="text-3xl sm:text-4xl md:text-5xl font-display font-black text-white tracking-tighter uppercase mb-6 md:mb-8">Workshop <span class="text-magenta">Dates & Venue</span></h3>
                         
-                        <div class="space-y-8">
+                        <div class="space-y-6 md:space-y-8">
                             <!-- Date -->
-                            <div class="flex items-start gap-5">
-                                <div class="w-12 h-12 rounded-full bg-deepBg flex items-center justify-center text-gold shrink-0 border border-white/5 shadow-inner">
-                                    <i class="far fa-calendar-alt text-xl"></i>
+                            <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-5">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-deepBg flex items-center justify-center text-gold shrink-0 border border-white/5 shadow-inner">
+                                    <i class="far fa-calendar-alt text-lg md:text-xl"></i>
                                 </div>
                                 <div>
-                                    <p class="text-white font-bold text-lg">May 11 (Mon) – May 20 (Wed)</p>
-                                    <p class="text-muted text-sm font-body mt-1">10 Days Intensive Workshop</p>
-                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ENRICH+2026+Worship+Workshop&dates=20260511T033000Z/20260520T123000Z&details=10-Day+Worship+%26+Music+Workshop.+Level+Up.+Lead+Bold.+Learn+Worship.&location=Samadhana+Sadan,+AG+Bible+College,+Ponnal,+Telangana-500078" target="_blank" rel="noopener noreferrer" class="text-gold text-xs hover:text-white transition-colors inline-flex items-center gap-2 mt-3 font-bold uppercase tracking-widest border border-gold/30 px-3 py-1 rounded-full">
+                                    <p class="text-white font-bold text-base md:text-lg">May 11 (Mon) – May 20 (Wed)</p>
+                                    <p class="text-muted text-xs md:text-sm font-body mt-1">10 Days Intensive Workshop</p>
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ENRICH+2026+Worship+Workshop&dates=20260511T033000Z/20260520T123000Z&details=10-Day+Worship+%26+Music+Workshop.+Level+Up.+Lead+Bold.+Learn+Worship.&location=Samadhana+Sadan,+AG+Bible+College,+Ponnal,+Telangana-500078" target="_blank" rel="noopener noreferrer" class="text-gold text-[10px] md:text-xs hover:text-white transition-colors inline-flex items-center gap-2 mt-3 font-bold uppercase tracking-widest border border-gold/30 px-3 py-1 rounded-full">
                                         <i class="far fa-calendar-plus"></i> Add to Calendar
                                     </a>
                                 </div>
                             </div>
                             
                             <!-- Location -->
-                            <div class="flex items-start gap-5">
-                                <div class="w-12 h-12 rounded-full bg-deepBg flex items-center justify-center text-cyan shrink-0 border border-white/5 shadow-inner">
-                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                            <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-5">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-deepBg flex items-center justify-center text-cyan shrink-0 border border-white/5 shadow-inner">
+                                    <i class="fas fa-map-marker-alt text-lg md:text-xl"></i>
                                 </div>
                                 <div>
-                                    <p class="text-white font-bold text-lg">Samadhana Sadan, AG Bible College</p>
-                                    <p class="text-muted text-sm font-body mt-1">Ponnal, Telangana - 500078</p>
-                                    <a href="https://www.google.com/maps/place/Samadhana+Sadan+-+Telugu+District+of+SIAG/@17.5979743,78.6263884,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb8334028a9c07:0xffe3b944f5835deb!8m2!3d17.5979692!4d78.6289633!16s%2Fg%2F11jyb3rs58!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="text-cyan text-xs hover:text-white transition-colors inline-flex items-center gap-2 mt-3 font-bold uppercase tracking-widest border border-cyan/30 px-3 py-1 rounded-full">
+                                    <p class="text-white font-bold text-base md:text-lg">Samadhana Sadan, AG Bible College</p>
+                                    <p class="text-muted text-xs md:text-sm font-body mt-1">Ponnal, Telangana - 500078</p>
+                                    <a href="https://www.google.com/maps/place/Samadhana+Sadan+-+Telugu+District+of+SIAG/@17.5979743,78.6263884,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb8334028a9c07:0xffe3b944f5835deb!8m2!3d17.5979692!4d78.6289633!16s%2Fg%2F11jyb3rs58!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="text-cyan text-[10px] md:text-xs hover:text-white transition-colors inline-flex items-center gap-2 mt-3 font-bold uppercase tracking-widest border border-cyan/30 px-3 py-1 rounded-full">
                                         View on Maps <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -561,39 +561,39 @@
                     </div>
                     
                     <!-- Right: Pricing/Payment Embed -->
-                    <div class="p-8 flex flex-col justify-center items-center text-center bg-[#FFFFFF] relative overflow-hidden border-l border-[#BDC1C6]">
+                    <div class="p-6 md:p-8 flex flex-col justify-center items-center text-center bg-[#FFFFFF] relative overflow-hidden border-t md:border-t-0 md:border-l border-[#BDC1C6]">
                         <div class="relative z-10 w-full flex flex-col items-center">
                             
-                            <h2 class="text-2xl font-display font-black text-[#1A73E8] tracking-tight mb-1">🎶 WORKSHOP FEE</h2>
-                            <p class="text-[#3C4043] font-bold text-sm uppercase tracking-widest mb-4">Payment Details</p>
+                            <h2 class="text-xl md:text-2xl font-display font-black text-[#1A73E8] tracking-tight mb-1">🎶 WORKSHOP FEE</h2>
+                            <p class="text-[#3C4043] font-bold text-xs md:text-sm uppercase tracking-widest mb-4">Payment Details</p>
                             
-                            <p class="text-4xl font-display font-black text-[#1A73E8] tracking-tighter mb-1 drop-shadow-sm">₹5,000</p>
-                            <p class="text-[#3C4043] text-xs font-bold mb-3">(Stay + Food included)</p>
-                            <p class="text-[#3C4043] text-[10px] mb-6 bg-gray-50 py-1.5 px-4 rounded-full border border-[#BDC1C6]">
+                            <p class="text-3xl md:text-4xl font-display font-black text-[#1A73E8] tracking-tighter mb-1 drop-shadow-sm">₹5,000</p>
+                            <p class="text-[#3C4043] text-[10px] md:text-xs font-bold mb-3">(Stay + Food included)</p>
+                            <p class="text-[#3C4043] text-[9px] md:text-[10px] mb-5 md:mb-6 bg-gray-50 py-1.5 px-3 md:px-4 rounded-full border border-[#BDC1C6] whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
                                 UPI ID | sunnyprasad1-1@oksbi
                             </p>
                             
                             <!-- Fixed Amount GPay Button (Official Colors) -->
                             <a href="upi://pay?pa=sunnyprasad1-1@oksbi&pn=Enrich%202026&am=5000&cu=INR&tr=ENRICH2026-%7B%7BORDER-ID%7D%7D&tn=Workshop%20Fee%20May%2011-20" 
                                id="dynamic-gpay-btn"
-                               class="w-full h-[56px] mb-4 bg-[#1A73E8] text-[#FFFFFF] font-body text-lg font-medium rounded-full flex items-center justify-center shadow-[0_4px_10px_rgba(26,115,232,0.3)] hover:shadow-[0_6px_15px_rgba(66,133,244,0.4)] hover:bg-[#4285F4] hover:-translate-y-1 transition-all duration-300 border border-[#BDC1C6]" 
+                               class="w-full h-[50px] md:h-[56px] mb-4 bg-[#1A73E8] text-[#FFFFFF] font-body text-base md:text-lg font-medium rounded-full flex items-center justify-center shadow-[0_4px_10px_rgba(26,115,232,0.3)] hover:shadow-[0_6px_15px_rgba(66,133,244,0.4)] hover:bg-[#4285F4] hover:-translate-y-1 transition-all duration-300 border border-[#BDC1C6]" 
                                target="_blank">
-                                Pay ₹5,000 <i class="fa-brands fa-google-pay text-[48px] leading-none ml-2"></i>
+                                Pay ₹5,000 <i class="fa-brands fa-google-pay text-[40px] md:text-[48px] leading-none ml-2"></i>
                             </a>
                             
                             <!-- QR Code Section -->
-                            <div class="bg-[#FFFFFF] p-4 rounded-2xl mb-4 shadow-sm flex flex-col items-center w-[180px] border border-[#BDC1C6]">
-                                <p class="text-[#3C4043] font-bold text-xs mb-2">Or Scan to Pay:</p>
+                            <div class="bg-[#FFFFFF] p-3 md:p-4 rounded-2xl mb-4 shadow-sm flex flex-col items-center w-[150px] md:w-[180px] border border-[#BDC1C6]">
+                                <p class="text-[#3C4043] font-bold text-[10px] md:text-xs mb-2">Or Scan to Pay:</p>
                                 <img src="images/QR_Code.jpeg" 
                                      alt="GPay QR Code" class="rounded-xl w-full h-auto mb-2 border border-[#BDC1C6]">
-                                <p class="text-[#3C4043] text-[9px] uppercase font-bold tracking-wider">Enrich 2026 Workshop</p>
+                                <p class="text-[#3C4043] text-[8px] md:text-[9px] uppercase font-bold tracking-wider text-center">Enrich 2026 Workshop</p>
                             </div>
                             
                             <!-- WhatsApp Share Button -->
                             <a href="https://api.whatsapp.com/send?phone=919844105095&text=I've%20registered%20for%20ENRICH%202026!%20Paid%20via%20GPay.%20Count%20me in!" 
                                target="_blank" rel="noopener noreferrer"
-                               class="w-full h-[48px] bg-[#34A853] text-[#FFFFFF] font-display font-bold text-sm uppercase tracking-widest rounded-full flex items-center justify-center shadow-[0_4px_10px_rgba(52,168,83,0.3)] hover:shadow-[0_6px_15px_rgba(52,168,83,0.5)] hover:-translate-y-1 transition-all duration-300">
-                                <i class="fab fa-whatsapp text-xl mr-2"></i> Share on WhatsApp
+                               class="w-full h-[44px] md:h-[48px] bg-[#34A853] text-[#FFFFFF] font-display font-bold text-[10px] md:text-sm uppercase tracking-widest rounded-full flex items-center justify-center shadow-[0_4px_10px_rgba(52,168,83,0.3)] hover:shadow-[0_6px_15px_rgba(52,168,83,0.5)] hover:-translate-y-1 transition-all duration-300">
+                                <i class="fab fa-whatsapp text-lg md:text-xl mr-2"></i> Share on WhatsApp
                             </a>
                             
                         </div>
@@ -604,49 +604,49 @@
     </section>
 
     <!-- Music Footer / Contact -->
-    <footer class="py-16 bg-cardBg border-t border-white/5 relative overflow-hidden">
+    <footer class="py-12 md:py-16 bg-cardBg border-t border-white/5 relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50"></div>
         
         <div class="container mx-auto px-4 lg:px-12 text-center relative z-10">
             
-            <div class="mb-16">
-                <h2 class="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tighter mb-6">
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tighter mb-4 md:mb-6">
                     Ready to <span class="text-music-gradient">Serve?</span>
                 </h2>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-4 btn-music-primary font-display font-bold text-sm uppercase tracking-widest rounded-full transition-all shadow-xl">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-block px-8 md:px-10 py-3 md:py-4 btn-music-primary font-display font-bold text-xs md:text-sm uppercase tracking-widest rounded-full transition-all shadow-xl">
                     Register Now - Click Here
                 </a>
             </div>
             
-            <div class="w-full max-w-5xl mx-auto border-t border-white/10 pt-12">
-                <p class="font-display font-bold text-muted text-xs uppercase tracking-[0.2em] mb-10">Direct Contacts</p>
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-xs font-body">
+            <div class="w-full max-w-5xl mx-auto border-t border-white/10 pt-10 md:pt-12">
+                <p class="font-display font-bold text-muted text-[10px] md:text-xs uppercase tracking-[0.2em] mb-8 md:mb-10">Direct Contacts</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 text-xs font-body">
                     
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center bg-deepBg/50 sm:bg-transparent p-4 sm:p-0 rounded-lg">
                         <span class="text-white font-bold mb-1">Rev. Dr. Jacob Mathew</span>
                         <span class="text-magenta text-[10px] uppercase font-bold tracking-wider mb-2">NYM Director</span>
                         <a href="https://wa.me/919007275443" class="text-muted hover:text-white transition flex items-center gap-1.5"><i class="fab fa-whatsapp text-[#25D366] text-sm"></i> 90072 75443</a>
                     </div>
                     
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center bg-deepBg/50 sm:bg-transparent p-4 sm:p-0 rounded-lg">
                         <span class="text-white font-bold mb-1">Rev. Younus Samuel</span>
                         <span class="text-cyan text-[10px] uppercase font-bold tracking-wider mb-2">SIAG Youth Dir.</span>
                         <a href="https://wa.me/919848020461" class="text-muted hover:text-white transition flex items-center gap-1.5"><i class="fab fa-whatsapp text-[#25D366] text-sm"></i> 98480 20461</a>
                     </div>
 
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center bg-deepBg/50 sm:bg-transparent p-4 sm:p-0 rounded-lg">
                         <span class="text-white font-bold mb-1">Rev. Timothy Srinivas</span>
                         <span class="text-magenta text-[10px] uppercase font-bold tracking-wider mb-2">AP Youth Dir.</span>
                         <a href="https://wa.me/919032256680" class="text-muted hover:text-white transition flex items-center gap-1.5"><i class="fab fa-whatsapp text-[#25D366] text-sm"></i> 90322 56680</a>
                     </div>
 
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center bg-deepBg/50 sm:bg-transparent p-4 sm:p-0 rounded-lg">
                         <span class="text-white font-bold mb-1">Rev. Milton Raj</span>
                         <span class="text-cyan text-[10px] uppercase font-bold tracking-wider mb-2">AP Youth Dir.</span>
                         <a href="https://wa.me/919849269326" class="text-muted hover:text-white transition flex items-center gap-1.5"><i class="fab fa-whatsapp text-[#25D366] text-sm"></i> 98492 69326</a>
                     </div>
                     
-                    <div class="flex flex-col items-center col-span-2 md:col-span-1">
+                    <div class="flex flex-col items-center bg-deepBg/50 sm:bg-transparent p-4 sm:p-0 rounded-lg sm:col-span-2 lg:col-span-1">
                         <span class="text-white font-bold mb-1">Rev. Dr. Sunny Prasad</span>
                         <span class="text-magenta text-[10px] uppercase font-bold tracking-wider mb-2">Workshop Dir.</span>
                         <a href="https://wa.me/919844105095" class="text-muted hover:text-white transition flex items-center gap-1.5"><i class="fab fa-whatsapp text-[#25D366] text-sm"></i> 98441 05095</a>
@@ -655,7 +655,7 @@
                 </div>
             </div>
             
-            <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-muted/60 font-display uppercase tracking-widest font-bold">
+            <div class="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-3 text-[9px] md:text-[10px] text-muted/60 font-display uppercase tracking-widest font-bold">
                 <span>&copy; 2026 AG National Youth Movement.</span>
                 <span>Built for the next generation.</span>
             </div>
@@ -675,8 +675,8 @@
     <!-- Guitar Modal -->
     <div id="guitarModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-deepBg/95 backdrop-blur-md transition-opacity duration-300 p-0 md:p-6">
         <div class="modal-card rounded-none md:rounded-3xl w-full h-[100dvh] md:h-[90vh] max-w-7xl flex flex-col relative transform scale-95 opacity-0 transition-all duration-300" id="guitarCard">
-            <button onclick="closeGuitarModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-magenta text-xl transition-all z-20 bg-cardBg/80 border border-white/10 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
-            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden">
+            <button onclick="closeGuitarModal()" class="absolute top-3 right-3 md:top-6 md:right-6 text-white hover:text-magenta text-lg md:text-xl transition-all z-20 bg-cardBg/90 md:bg-cardBg/80 border border-white/10 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
+            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden pt-14 md:pt-0">
                 <iframe src="https://gamma.app/embed/fgwxmudh9zlyij6" class="absolute inset-0 w-full h-full border-none" allow="fullscreen"></iframe>
             </div>
         </div>
@@ -685,8 +685,8 @@
     <!-- Keys Modal -->
     <div id="keysModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-deepBg/95 backdrop-blur-md transition-opacity duration-300 p-0 md:p-6">
         <div class="modal-card !border-cyan/30 !shadow-[0_0_60px_rgba(0,0,0,0.9),0_0_30px_rgba(0,212,255,0.15)] rounded-none md:rounded-3xl w-full h-[100dvh] md:h-[90vh] max-w-7xl flex flex-col relative transform scale-95 opacity-0 transition-all duration-300" id="keysCard">
-            <button onclick="closeKeysModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-cyan text-xl transition-all z-20 bg-cardBg/80 border border-white/10 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
-            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden">
+            <button onclick="closeKeysModal()" class="absolute top-3 right-3 md:top-6 md:right-6 text-white hover:text-cyan text-lg md:text-xl transition-all z-20 bg-cardBg/90 md:bg-cardBg/80 border border-white/10 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
+            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden pt-14 md:pt-0">
                 <iframe src="https://gamma.app/embed/6tumr3vt5418fn5" class="absolute inset-0 w-full h-full border-none" allow="fullscreen"></iframe>
             </div>
         </div>
@@ -695,8 +695,8 @@
     <!-- Drums Modal -->
     <div id="drumsModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-deepBg/95 backdrop-blur-md transition-opacity duration-300 p-0 md:p-6">
         <div class="modal-card rounded-none md:rounded-3xl w-full h-[100dvh] md:h-[90vh] max-w-7xl flex flex-col relative transform scale-95 opacity-0 transition-all duration-300" id="drumsCard">
-            <button onclick="closeDrumsModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-magenta text-xl transition-all z-20 bg-cardBg/80 border border-white/10 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
-            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden">
+            <button onclick="closeDrumsModal()" class="absolute top-3 right-3 md:top-6 md:right-6 text-white hover:text-magenta text-lg md:text-xl transition-all z-20 bg-cardBg/90 md:bg-cardBg/80 border border-white/10 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
+            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden pt-14 md:pt-0">
                 <iframe src="https://gamma.app/embed/z9t3zc93jjl5ar1" class="absolute inset-0 w-full h-full border-none" allow="fullscreen"></iframe>
             </div>
         </div>
@@ -705,8 +705,8 @@
     <!-- Vocals Modal -->
     <div id="vocalsModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-deepBg/95 backdrop-blur-md transition-opacity duration-300 p-0 md:p-6">
         <div class="modal-card !border-cyan/30 !shadow-[0_0_60px_rgba(0,0,0,0.9),0_0_30px_rgba(0,212,255,0.15)] rounded-none md:rounded-3xl w-full h-[100dvh] md:h-[90vh] max-w-7xl flex flex-col relative transform scale-95 opacity-0 transition-all duration-300" id="vocalsCard">
-            <button onclick="closeVocalsModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-cyan text-xl transition-all z-20 bg-cardBg/80 border border-white/10 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
-            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden">
+            <button onclick="closeVocalsModal()" class="absolute top-3 right-3 md:top-6 md:right-6 text-white hover:text-cyan text-lg md:text-xl transition-all z-20 bg-cardBg/90 md:bg-cardBg/80 border border-white/10 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
+            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden pt-14 md:pt-0">
                 <iframe src="https://gamma.app/embed/2vk3s6nfi3l1lmq" class="absolute inset-0 w-full h-full border-none" allow="fullscreen"></iframe>
             </div>
         </div>
@@ -715,8 +715,8 @@
     <!-- Media Modal -->
     <div id="mediaModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-deepBg/95 backdrop-blur-md transition-opacity duration-300 p-0 md:p-6">
         <div class="modal-card rounded-none md:rounded-3xl w-full h-[100dvh] md:h-[90vh] max-w-7xl flex flex-col relative transform scale-95 opacity-0 transition-all duration-300" id="mediaCard">
-            <button onclick="closeMediaModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-magenta text-xl transition-all z-20 bg-cardBg/80 border border-white/10 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
-            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden">
+            <button onclick="closeMediaModal()" class="absolute top-3 right-3 md:top-6 md:right-6 text-white hover:text-magenta text-lg md:text-xl transition-all z-20 bg-cardBg/90 md:bg-cardBg/80 border border-white/10 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-times"></i></button>
+            <div class="w-full h-full flex-grow bg-deepBg relative md:rounded-2xl overflow-hidden pt-14 md:pt-0">
                 <iframe src="https://gamma.app/embed/sobul0p9e9yh4em" class="absolute inset-0 w-full h-full border-none" allow="fullscreen" title="Worship Media Production"></iframe>
             </div>
         </div>
