@@ -170,8 +170,8 @@
     <nav class="fixed w-full z-50 bg-deepBg/90 backdrop-blur-xl border-b border-white/5 top-0 transition-all duration-300">
         <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center relative z-10">
             <!-- Branding -->
-            <div class="flex items-center space-x-3 cursor-pointer">
-                <div class="h-8 w-8 md:h-10 md:w-10 rounded-xl border border-magenta/40 bg-cardBg flex items-center justify-center overflow-hidden shadow-[0_0_15px_rgba(255,0,170,0.2)]">
+            <div class="flex items-center space-x-3 cursor-pointer shrink-0">
+                <div class="h-8 w-8 md:h-10 md:w-10 rounded-xl border border-magenta/40 bg-cardBg flex items-center justify-center overflow-hidden shadow-[0_0_15px_rgba(255,0,170,0.2)] shrink-0">
                     <img src="images/image nym_1.jpg" alt="AG Logo" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col">
@@ -179,23 +179,31 @@
                 </div>
             </div>
 
-            <!-- Desktop Links -->
-            <div class="hidden md:flex items-center gap-8">
-                <div class="flex space-x-8 font-display text-xs font-bold uppercase tracking-widest items-center text-muted">
-                    <a href="#home" class="hover:text-cyan transition duration-300">Overview</a>
-                    <a href="#vault" class="hover:text-magenta transition duration-300">Tracks</a>
-                    <a href="#playlist" class="hover:text-cyan transition duration-300">Setlist</a>
-                    <a href="#details" class="hover:text-gold transition duration-300">Venue</a>
+            <!-- Right Elements Container -->
+            <div class="flex items-center gap-4 md:gap-8">
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <div class="flex space-x-8 font-display text-xs font-bold uppercase tracking-widest items-center text-muted">
+                        <a href="#home" class="hover:text-cyan transition duration-300">Overview</a>
+                        <a href="#vault" class="hover:text-magenta transition duration-300">Tracks</a>
+                        <a href="#playlist" class="hover:text-cyan transition duration-300">Setlist</a>
+                        <a href="#details" class="hover:text-gold transition duration-300">Venue</a>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 btn-register-green font-display text-xs font-bold tracking-widest rounded-full uppercase shrink-0">
+                        Register Now
+                    </a>
                 </div>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12h5dQOfuV4T8M9U8c_XjAtjbfHPkPRDzYT-QdT3d5dmciw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 btn-register-green font-display text-xs font-bold tracking-widest rounded-full uppercase">
-                    Register Now
-                </a>
+                
+                <!-- Second Logo (AOG) -->
+                <div class="h-8 w-8 md:h-10 md:w-10 rounded-xl border border-cyan/40 bg-cardBg flex items-center justify-center overflow-hidden shadow-[0_0_15px_rgba(0,212,255,0.2)] shrink-0">
+                    <img src="images/AOG_Logo_new.png" alt="AOG Logo" class="w-full h-full object-contain p-0.5">
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="mobile-menu-btn" class="md:hidden text-muted hover:text-magenta focus:outline-none text-2xl p-2 shrink-0">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            
-            <!-- Mobile Toggle -->
-            <button id="mobile-menu-btn" class="md:hidden text-muted hover:text-magenta focus:outline-none text-2xl p-2">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
 
         <!-- Mobile Menu -->
